@@ -5,11 +5,7 @@ import bulma from './main'
 if (require.main !== module) {
   render(
     <div>
-      <bulma.Columns.Columns>
-        <bulma.Columns.Column>
-        TEST
-        </bulma.Columns.Column>
-      </bulma.Columns.Columns>
+      <bulma.Input type={bulma.InputTypes.Password}/>
     </div>,
      document.getElementById('root')
   );

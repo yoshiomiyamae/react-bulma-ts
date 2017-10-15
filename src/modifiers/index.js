@@ -1,8 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var helpers_1 = require("./helpers");
-var responsive_helpers_1 = require("./responsive-helpers");
-var typography_helpers_1 = require("./typography-helpers");
+const helpers_1 = require("./helpers");
+exports.Float = helpers_1.Float;
+exports.Other = helpers_1.Other;
+exports.Spacing = helpers_1.Spacing;
+const responsive_helpers_1 = require("./responsive-helpers");
+exports.Hide = responsive_helpers_1.Hide;
+exports.Show = responsive_helpers_1.Show;
+const typography_helpers_1 = require("./typography-helpers");
+exports.ResponsiveSize = typography_helpers_1.ResponsiveSize;
+exports.ResponsiveTextAlignment = typography_helpers_1.ResponsiveTextAlignment;
+exports.Size = typography_helpers_1.Size;
+exports.TextAlignment = typography_helpers_1.TextAlignment;
+exports.TextColors = typography_helpers_1.TextColors;
+exports.TextTransformation = typography_helpers_1.TextTransformation;
+exports.TextWeight = typography_helpers_1.TextWeight;
 var Colors;
 (function (Colors) {
     Colors["White"] = "is-white";
@@ -18,6 +30,7 @@ var Colors;
 })(Colors = exports.Colors || (exports.Colors = {}));
 var Sizes;
 (function (Sizes) {
+    Sizes["Normal"] = "is-normal";
     Sizes["Small"] = "is-small";
     Sizes["Medium"] = "is-medium";
     Sizes["Large"] = "is-large";
@@ -37,7 +50,13 @@ var States;
 })(States = exports.States || (exports.States = {}));
 var Alignments;
 (function (Alignments) {
-    Alignments["Centerd"] = "is-centered";
+    Alignments["Centered"] = "is-centered";
+    Alignments["Right"] = "is-right";
 })(Alignments = exports.Alignments || (exports.Alignments = {}));
-exports.default = { Helpers: helpers_1.default, ResponsiveHelpers: responsive_helpers_1.default, TypograpyHelpers: typography_helpers_1.default, Colors: Colors, Sizes: Sizes, Styles: Styles, States: States, Alignments: Alignments };
+var Breakpoints;
+(function (Breakpoints) {
+    Breakpoints["Mobile"] = "is-mobile";
+    Breakpoints["Widescreen"] = "is-widescreen";
+    Breakpoints["Fullhd"] = "is-fullhd";
+})(Breakpoints = exports.Breakpoints || (exports.Breakpoints = {}));
 //# sourceMappingURL=index.js.map

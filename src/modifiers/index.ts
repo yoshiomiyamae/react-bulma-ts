@@ -1,7 +1,8 @@
-import Helpers from './helpers';
-import ResponsiveHelpers from './responsive-helpers';
-import TypograpyHelpers from './typography-helpers';
+import {Float, Other, Spacing} from './helpers';
+import {Hide, Show} from './responsive-helpers';
+import {ResponsiveSize, ResponsiveTextAlignment, Size, TextAlignment, TextColors, TextTransformation, TextWeight} from './typography-helpers';
 
+export {Float, Other, Spacing, Hide, Show, ResponsiveSize, ResponsiveTextAlignment, Size, TextAlignment, TextColors, TextTransformation, TextWeight}
 
 export enum Colors {
     White = 'is-white',
@@ -17,6 +18,7 @@ export enum Colors {
 }
 
 export enum Sizes {
+    Normal = 'is-normal',
     Small = 'is-small',
     Medium = 'is-medium',
     Large = 'is-large',
@@ -36,7 +38,12 @@ export enum States {
 }
 
 export enum Alignments {
-    Centerd = 'is-centered',
+    Centered = 'is-centered',
+    Right = 'is-right',
 }
 
-export default {Helpers, ResponsiveHelpers, TypograpyHelpers, Colors, Sizes, Styles, States, Alignments};
+export enum Breakpoints {
+    Mobile = 'is-mobile',
+    Widescreen = 'is-widescreen',
+    Fullhd = 'is-fullhd',
+}
