@@ -2,6 +2,7 @@
   "name": "react-bulma",
   "version": "1.0.0",
   "main": "src/main.js",
+  "typings": "src/main",
   "author": "Yoshio Miyamae <yoshio.miyamae@famoce-succellion.com>",
   "license": "MIT",
   "dependencies": {
