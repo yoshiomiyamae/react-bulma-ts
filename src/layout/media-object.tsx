@@ -4,7 +4,13 @@ import {classNameBuilder} from '../common';
 interface MediaProps {
   children?: any;
 }
-interface MediaLeftRightProps {
+interface MediaLeftProps {
+  children?: any;
+}
+interface MediaRightProps {
+  children?: any;
+}
+interface MediaContentProps {
   children?: any;
 }
 interface MediaItemProps {
@@ -21,7 +27,17 @@ export class Media extends React.Component<MediaProps> {
   }
 }
 
-export class MediaLeft extends React.Component<MediaLeftRightProps> {
+export class MediaContent extends React.Component<MediaContentProps> {
+  render () {
+    return (
+      <div className={classNameBuilder(['media-content'])}>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+export class MediaLeft extends React.Component<MediaLeftProps> {
   render () {
     return (
       <div className={classNameBuilder(['media-left'])}>
@@ -31,7 +47,7 @@ export class MediaLeft extends React.Component<MediaLeftRightProps> {
   }
 }
 
-export class MediaRight extends React.Component<MediaLeftRightProps> {
+export class MediaRight extends React.Component<MediaRightProps> {
   render () {
     return (
       <div className={classNameBuilder(['media-right'])}>

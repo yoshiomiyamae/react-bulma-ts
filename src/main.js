@@ -6,5 +6,6 @@ const Elements = require("./elements");
 const Form = require("./form");
 const Layout = require("./layout");
 const Modifiers = require("./modifiers");
-exports.default = Object.assign({}, Columns, Elements, Form, Layout, Modifiers);
+const Components = require("./components");
+exports.default = Object.assign({}, Columns, Elements, Form, Layout, Modifiers, Components);
 //# sourceMappingURL=main.js.map

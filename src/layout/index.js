@@ -16,6 +16,7 @@ exports.LevelLeft = level_1.LevelLeft;
 exports.LevelRight = level_1.LevelRight;
 const media_object_1 = require("./media-object");
 exports.Media = media_object_1.Media;
+exports.MediaContent = media_object_1.MediaContent;
 exports.MediaItem = media_object_1.MediaItem;
 exports.MediaLeft = media_object_1.MediaLeft;
 exports.MediaRight = media_object_1.MediaRight;
