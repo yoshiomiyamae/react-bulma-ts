@@ -60,6 +60,7 @@ interface NavbarItemProps {
   href?: string;
   active?: boolean;
   tab?: boolean;
+  hoverable?: boolean;
 
   [x: string]: any;
 }
@@ -123,7 +124,7 @@ export class NavbarBurger extends React.Component<NavbarBurgerProps> {
   }
 }
 
-export class NavbarHMenu extends React.Component<NavbarMenuProps> {
+export class NavbarMenu extends React.Component<NavbarMenuProps> {
   render () {
     return (
       <div className={classNameBuilder(['navbar-menu',
@@ -167,25 +168,23 @@ export class NavbarTabs extends React.Component<NavbarTabsProps> {
 
 export class NavbarItem extends React.Component<NavbarItemProps> {
   render () {
+    var className = classNameBuilder(['navbar-item',
+                                      (this.props.hasDropdown ? 'has-dropdown' : ''),
+                                      (this.props.active ? 'is-active' : ''),
+                                      (this.props.tab ? 'is-tab' : ''),
+                                      (this.props.hoverable ? 'is-hoverable' : ''),
+                                    ]);
     switch(this.props.type) {
       case NavbarItemTypes.Div:
         return (
-          <div className={classNameBuilder(['navbar-item',
-                                            (this.props.hasDropdown ? 'has-dropdown' : ''),
-                                            (this.props.active ? 'is-active' : ''),
-                                            (this.props.tab ? 'is-tab' : ''),
-                                          ])}>
+          <div className={className}>
             {this.props.children}
           </div>
         );
       case NavbarItemTypes.Anchor:
       default:
         return (
-          <a className={classNameBuilder(['navbar-item',
-                                          (this.props.hasDropdown ? 'has-dropdown' : ''),
-                                          (this.props.active ? 'is-active' : ''),
-                                          (this.props.tab ? 'is-tab' : ''),
-                                        ])}
+          <a className={className}
              {...(() => {
                if(this.props.href){
                  return {href: this.props.href}

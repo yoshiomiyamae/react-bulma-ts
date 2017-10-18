@@ -34,14 +34,14 @@ class NavbarBurger extends React.Component {
     }
 }
 exports.NavbarBurger = NavbarBurger;
-class NavbarHMenu extends React.Component {
+class NavbarMenu extends React.Component {
     render() {
         return (React.createElement("div", { className: common_1.classNameBuilder(['navbar-menu',
                 (this.props.active ? 'is-active' : '')
             ]) }, this.props.children));
     }
 }
-exports.NavbarHMenu = NavbarHMenu;
+exports.NavbarMenu = NavbarMenu;
 class NavbarStart extends React.Component {
     render() {
         return (React.createElement("div", { className: common_1.classNameBuilder(['navbar-start']) }, this.props.children));
@@ -62,20 +62,18 @@ class NavbarTabs extends React.Component {
 exports.NavbarTabs = NavbarTabs;
 class NavbarItem extends React.Component {
     render() {
+        var className = common_1.classNameBuilder(['navbar-item',
+            (this.props.hasDropdown ? 'has-dropdown' : ''),
+            (this.props.active ? 'is-active' : ''),
+            (this.props.tab ? 'is-tab' : ''),
+            (this.props.hoverable ? 'is-hoverable' : ''),
+        ]);
         switch (this.props.type) {
             case NavbarItemTypes.Div:
-                return (React.createElement("div", { className: common_1.classNameBuilder(['navbar-item',
-                        (this.props.hasDropdown ? 'has-dropdown' : ''),
-                        (this.props.active ? 'is-active' : ''),
-                        (this.props.tab ? 'is-tab' : ''),
-                    ]) }, this.props.children));
+                return (React.createElement("div", { className: className }, this.props.children));
             case NavbarItemTypes.Anchor:
             default:
-                return (React.createElement("a", Object.assign({ className: common_1.classNameBuilder(['navbar-item',
-                        (this.props.hasDropdown ? 'has-dropdown' : ''),
-                        (this.props.active ? 'is-active' : ''),
-                        (this.props.tab ? 'is-tab' : ''),
-                    ]) }, (() => {
+                return (React.createElement("a", Object.assign({ className: className }, (() => {
                     if (this.props.href) {
                         return { href: this.props.href };
                     }
