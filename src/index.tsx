@@ -1,10 +1,49 @@
 import * as React from 'react';
 import {render} from 'react-dom';
-import bulma from './main'
+import * as bulma from './main'
 
 if (require.main !== module) {
   render(
     <div>
+      <bulma.Container>
+        <bulma.Navbar>
+          <bulma.NavbarBrand>
+            <bulma.NavbarItem href="https://bulma.io">
+              <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" height="28" width="112" />
+            </bulma.NavbarItem>
+          </bulma.NavbarBrand>
+          <bulma.NavbarMenu>
+            <bulma.NavbarStart>
+              <bulma.NavbarItem hasDropdown={true} hoverable={true}>
+                <bulma.NavbarLink href="/documentation/overview/start/">Docs</bulma.NavbarLink>
+                <bulma.NavbarDropdown>
+                  <bulma.NavbarItem href="/documentation/overview/start/">Overview</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/modifiers/syntax/">Modifiers</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/columns/basics/">Columns</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/layout/container/">Layout</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/form/general/">Form</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/elements/box/">Elements</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/components/breadcrumb/">Components</bulma.NavbarItem>
+                  <bulma.NavbarItem href="https://bulma.io/documentation/modifiers/syntax/">Elements</bulma.NavbarItem>
+                  <bulma.NavbarDivider />
+                  <bulma.NavbarItem>
+                    <div>
+                      <p className={bulma.ResponsiveSize.size6Desktop}>
+                        <strong>Version 0.6.0</strong>
+                      </p>
+                      <small>
+                        <a href="https://versions.bulma.io/">View all versions</a>
+                      </small>
+                    </div>
+                  </bulma.NavbarItem>
+                </bulma.NavbarDropdown>
+              </bulma.NavbarItem>
+            </bulma.NavbarStart>
+            <bulma.NavbarEnd>
+            </bulma.NavbarEnd>
+          </bulma.NavbarMenu>
+        </bulma.Navbar>
+      </bulma.Container>
       <bulma.Hero color={bulma.Colors.Link}>
         <bulma.HeroBody>
           <bulma.Container>
@@ -76,7 +115,11 @@ if (require.main !== module) {
                 Use <strong>NPM</strong> <em>(recommended)</em>:
               </bulma.Title>
               <figure>
-                <pre><code>npm install bulma</code></pre>
+                <pre>
+                  <code>
+                    {`npm install bulma`}
+                  </code>
+                </pre>
               </figure>
             </bulma.MediaContent>
           </bulma.Media>
@@ -109,7 +152,13 @@ if (require.main !== module) {
             <bulma.MessageHeader>Font Awesome icons</bulma.MessageHeader>
             <bulma.MessageBody>
               <p>If you want to use icons with Bulma, don't forget to include <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>:</p>
-              <figure><pre><code>&lt;link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;</code></pre></figure>
+              <figure>
+                <pre>
+                  <code>
+                    {`<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">`}
+                  </code>
+                </pre>
+              </figure>
             </bulma.MessageBody>
           </bulma.Message>
           <hr />
@@ -119,29 +168,62 @@ if (require.main !== module) {
               If you want to get started <strong>right away</strong>, you can use this <strong>HTML starter template</strong>. Just copy/paste this code in a file and save it on your computer.
             </p>
           </bulma.Content>
-          <div>
-            <figure><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-                &lt;title&gt;Hello Bulma!&lt;/title&gt;
-                &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
-                &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"&gt;
-              &lt;/head&gt;
-              &lt;body&gt;
-              &lt;section class="section"&gt;
-                &lt;div class="container"&gt;
-                  &lt;h1 class="title"&gt;
-                    Hello World
-                  &lt;/h1&gt;
-                  &lt;p class="subtitle"&gt;
-                    My first website with &lt;strong&gt;Bulma&lt;/strong&gt;!
-                  &lt;/p&gt;
-                &lt;/div&gt;
-              &lt;/section&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;</code></pre>
-            </figure>
-          </div>
+          <figure>
+            <pre>
+              <code>
+                {`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      Hello World
+    </h1>
+    <p class="subtitle">
+      My first website with <strong>Bulma</strong>!
+    </p>
+  </div>
+</section>
+</body>
+</html>`}
+              </code>
+            </pre>
+          </figure>
         </bulma.Container>
       </bulma.Section>
+      <bulma.Section>
+        <bulma.Container>
+          <p className={bulma.TextAlignment.Cenered + ' ' + bulma.TextColors.GrayLight}>
+            <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" height="24" width="128" />
+            <br />
+            This page is <strong className={bulma.TextColors.Gray}>open source</strong>.
+            Noticed a typo? Or something unclear?
+            <a className={bulma.TextColors.Gray} href="https://github.com/jgthms/bulma/blob/master/docs/documentation/overview/start.html" style={{'border-bottom': '1px solid currentColor'}}>
+              Improve this page on GitHub
+            </a>
+          </p>
+        </bulma.Container>
+      </bulma.Section>
+      <bulma.Hero color={bulma.Colors.Info}>
+        <bulma.Container>
+          <bulma.Columns>
+            <bulma.Column size={bulma.TwelveColumnsSystem.Four}>
+              <bulma.Title>Bulma <strong>Partners</strong></bulma.Title>
+              <bulma.Subtitle>Check out their products!</bulma.Subtitle>
+            </bulma.Column>
+            <bulma.Column size={bulma.TwelveColumnsSystem.Eight}>
+              ADS
+            </bulma.Column>
+          </bulma.Columns>
+        </bulma.Container>
+      </bulma.Hero>
     </div>,
     document.getElementById('root')
   );
