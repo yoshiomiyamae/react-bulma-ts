@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("./helpers");
+var helpers_1 = require("./helpers");
 exports.Float = helpers_1.Float;
 exports.Other = helpers_1.Other;
 exports.Spacing = helpers_1.Spacing;
-const responsive_helpers_1 = require("./responsive-helpers");
+var responsive_helpers_1 = require("./responsive-helpers");
 exports.Hide = responsive_helpers_1.Hide;
 exports.Show = responsive_helpers_1.Show;
-const typography_helpers_1 = require("./typography-helpers");
+var typography_helpers_1 = require("./typography-helpers");
 exports.ResponsiveSize = typography_helpers_1.ResponsiveSize;
 exports.ResponsiveTextAlignment = typography_helpers_1.ResponsiveTextAlignment;
 exports.Size = typography_helpers_1.Size;

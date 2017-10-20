@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const flatten = (array) => array.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []);
-exports.classNameBuilder = (className) => flatten(className).join(' ');
-exports.getEventHandlerFromProps = (props) => {
+var flatten = function (array) { return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []); };
+exports.classNameBuilder = function (className) { return flatten(className).join(' '); };
+exports.getEventHandlerFromProps = function (props) {
     var output = {};
     if (typeof props === 'object') {
         for (var key in props) {
@@ -13,7 +13,7 @@ exports.getEventHandlerFromProps = (props) => {
     }
     return output;
 };
-exports.getChildren = (props) => {
+exports.getChildren = function (props) {
     if (typeof props === 'object') {
         if ('children' in props) {
             return props.children;
