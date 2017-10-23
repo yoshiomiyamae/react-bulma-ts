@@ -18,7 +18,13 @@ var Table = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Table.prototype.render = function () {
-        return (React.createElement("table", { className: common_1.classNameBuilder(['table']) }, this.props.children));
+        return (React.createElement("table", { className: common_1.classNameBuilder(['table',
+                (this.props.bordered ? 'is-bordered' : ''),
+                (this.props.striped ? 'is-striped' : ''),
+                (this.props.narrow ? 'is-narrow' : ''),
+                (this.props.hoverable ? 'is-hoverable' : ''),
+                (this.props.fullwidth ? 'is-fullwidth' : ''),
+            ]) }, this.props.children));
     };
     return Table;
 }(React.Component));
