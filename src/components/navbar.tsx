@@ -111,7 +111,7 @@ export class NavbarBrand extends React.Component<NavbarBrandProps> {
 export class NavbarBurger extends React.Component<NavbarBurgerProps> {
   render () {
     return (
-      <button className={classNameBuilder(['navbar-burger',
+      <div className={classNameBuilder(['navbar-burger',
                                            (this.props.active ? 'is-active' : '')
                                          ])}
               {...getEventHandlerFromProps(this.props)}
@@ -119,7 +119,7 @@ export class NavbarBurger extends React.Component<NavbarBurgerProps> {
         <span />
         <span />
         <span />
-      </button>
+      </div>
     );
   }
 }
