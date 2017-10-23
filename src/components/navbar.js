@@ -58,7 +58,7 @@ var NavbarBurger = (function (_super) {
     }
     NavbarBurger.prototype.render = function () {
         return (React.createElement("div", __assign({ className: common_1.classNameBuilder(['navbar-burger',
-                (this.props.active ? 'is-active' : '')
+                (this.props.active ? 'is-active' : ''),
             ]) }, common_1.getEventHandlerFromProps(this.props)),
             React.createElement("span", null),
             React.createElement("span", null),

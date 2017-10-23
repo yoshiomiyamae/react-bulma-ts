@@ -112,8 +112,8 @@ export class NavbarBurger extends React.Component<NavbarBurgerProps> {
   render () {
     return (
       <div className={classNameBuilder(['navbar-burger',
-                                           (this.props.active ? 'is-active' : '')
-                                         ])}
+                                        (this.props.active ? 'is-active' : ''),
+                                      ])}
               {...getEventHandlerFromProps(this.props)}
               >
         <span />
