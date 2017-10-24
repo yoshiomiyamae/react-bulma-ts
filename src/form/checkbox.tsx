@@ -5,6 +5,7 @@ interface CheckboxProps {
   children?: any;
   disabled?: boolean;
   value?: any;
+  checked?: boolean;
 
   [x: string]: any;
 }
@@ -16,6 +17,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
         <input type="checkbox"
                disabled={this.props.disabled}
                value={this.props.value}
+               checked={this.props.checked}
                {...getEventHandlerFromProps(this.props)}
                />
         {this.props.children}
