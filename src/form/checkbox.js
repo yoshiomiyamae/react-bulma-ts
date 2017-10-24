@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -27,7 +26,7 @@ var Checkbox = (function (_super) {
     }
     Checkbox.prototype.render = function () {
         return (React.createElement("label", { className: common_1.classNameBuilder(['checkbox']) },
-            React.createElement("input", __assign({ type: "checkbox", disabled: this.props.disabled, value: this.props.value }, common_1.getEventHandlerFromProps(this.props))),
+            React.createElement("input", __assign({ type: "checkbox", disabled: this.props.disabled, value: this.props.value, checked: this.props.checked }, common_1.getEventHandlerFromProps(this.props))),
             this.props.children));
     };
     return Checkbox;
