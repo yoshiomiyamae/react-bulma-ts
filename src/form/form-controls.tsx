@@ -51,7 +51,7 @@ export class Label extends React.Component<LabelProps> {
 
 export class Field extends React.Component<FieldProps> {
   render () {
-    var alignment = this.props.style ? [this.props.style, this.props.alignment.substr(2)].join('') : this.props.alignment;
+    var alignment = this.props.style && this.props.alignment ? [this.props.style, this.props.alignment.substr(2)].join('') : this.props.alignment;
     var multiline = this.props.style ? [this.props.style, (this.props.multiline ? '-multiline' : '')].join('') : '';
     return (
       <div className={classNameBuilder(['field',
