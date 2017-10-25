@@ -8,6 +8,7 @@ interface SelectProps {
   size?: Sizes;
   state?: States;
   multiple?: number;
+  value?: any;
 
   [x: string]: any;
 }
@@ -24,7 +25,7 @@ export class Select extends React.Component<SelectProps> {
            size={this.props.multiple}
            {...getEventHandlerFromProps(this.props)}
            >
-        <select>
+        <select value={this.props.value}>
           {this.props.children}
         </select>
       </div>
