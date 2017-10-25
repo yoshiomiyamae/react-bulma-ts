@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -31,7 +30,7 @@ var Select = (function (_super) {
                 this.props.size,
                 this.props.state,
             ]), multiple: this.props.multiple, size: this.props.multiple }, common_1.getEventHandlerFromProps(this.props)),
-            React.createElement("select", null, this.props.children)));
+            React.createElement("select", { value: this.props.value }, this.props.children)));
     };
     return Select;
 }(React.Component));
