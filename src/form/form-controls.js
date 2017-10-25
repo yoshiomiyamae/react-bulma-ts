@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -39,7 +38,7 @@ var Field = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Field.prototype.render = function () {
-        var alignment = this.props.style ? [this.props.style, this.props.alignment.substr(2)].join('') : this.props.alignment;
+        var alignment = this.props.style && this.props.alignment ? [this.props.style, this.props.alignment.substr(2)].join('') : this.props.alignment;
         var multiline = this.props.style ? [this.props.style, (this.props.multiline ? '-multiline' : '')].join('') : '';
         return (React.createElement("div", { className: common_1.classNameBuilder(['field',
                 this.props.style,
