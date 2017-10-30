@@ -20,12 +20,12 @@ export class Select extends React.Component<SelectProps> {
                                         this.props.color,
                                         this.props.size,
                                         this.props.state,
-                                      ])}
-           multiple={this.props.multiple}
-           size={this.props.multiple}
-           {...getEventHandlerFromProps(this.props)}
-           >
-        <select value={this.props.value}>
+                                      ])}>
+        <select value={this.props.value}
+                multiple={this.props.multiple}
+                size={this.props.multiple}
+                {...getEventHandlerFromProps(this.props)}
+                >
           {this.props.children}
         </select>
       </div>
