@@ -25,12 +25,12 @@ var Select = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Select.prototype.render = function () {
-        return (React.createElement("div", __assign({ className: common_1.classNameBuilder(['select',
+        return (React.createElement("div", { className: common_1.classNameBuilder(['select',
                 this.props.color,
                 this.props.size,
                 this.props.state,
-            ]), multiple: this.props.multiple, size: this.props.multiple }, common_1.getEventHandlerFromProps(this.props)),
-            React.createElement("select", { value: this.props.value }, this.props.children)));
+            ]) },
+            React.createElement("select", __assign({ value: this.props.value, multiple: this.props.multiple, size: this.props.multiple }, common_1.getEventHandlerFromProps(this.props)), this.props.children)));
     };
     return Select;
 }(React.Component));
