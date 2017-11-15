@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -40,7 +39,7 @@ var PaginationPrevious = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PaginationPrevious.prototype.render = function () {
-        return (React.createElement("a", __assign({ className: common_1.classNameBuilder(['pagination-previous']), href: this.props.href }, common_1.getEventHandlerFromProps(this.props)), this.props.children));
+        return (React.createElement("a", __assign({ className: common_1.classNameBuilder(['pagination-previous']), href: this.props.href, disabled: this.props.disabled }, common_1.getEventHandlerFromProps(this.props)), this.props.children));
     };
     return PaginationPrevious;
 }(React.Component));
@@ -51,7 +50,7 @@ var PaginationNext = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     PaginationNext.prototype.render = function () {
-        return (React.createElement("a", __assign({ className: common_1.classNameBuilder(['pagination-next']), href: this.props.href }, common_1.getEventHandlerFromProps(this.props)), this.props.children));
+        return (React.createElement("a", __assign({ className: common_1.classNameBuilder(['pagination-next']), href: this.props.href, disabled: this.props.disabled }, common_1.getEventHandlerFromProps(this.props)), this.props.children));
     };
     return PaginationNext;
 }(React.Component));
@@ -76,7 +75,7 @@ var PaginationLink = (function (_super) {
         return (React.createElement("li", null,
             React.createElement("a", __assign({ className: common_1.classNameBuilder(['pagination-link',
                     (this.props.current ? 'is-current' : '')
-                ]) }, common_1.getEventHandlerFromProps(this.props)), this.props.children)));
+                ]), disabled: this.props.disabled }, common_1.getEventHandlerFromProps(this.props)), this.props.children)));
     };
     return PaginationLink;
 }(React.Component));
@@ -88,7 +87,7 @@ var PaginationEllipsis = (function (_super) {
     }
     PaginationEllipsis.prototype.render = function () {
         return (React.createElement("li", null,
-            React.createElement("span", { className: common_1.classNameBuilder(['pagination-ellipsis']) }, (this.props.children ? this.props.children : '&hellip;'))));
+            React.createElement("span", { className: common_1.classNameBuilder(['pagination-ellipsis']) }, (this.props.children ? this.props.children : '…'))));
     };
     return PaginationEllipsis;
 }(React.Component));
