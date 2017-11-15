@@ -65,7 +65,8 @@ export class PaginationPrevious extends React.Component<PaginationPreviousProps>
     return (
       <a className={classNameBuilder(['pagination-previous'])}
          href={this.props.href}
-         {...getEventHandlerFromProps(this.props), disable: this.props.disable}
+         disabled={this.props.disabled}
+         {...getEventHandlerFromProps(this.props)}
          >
         {this.props.children}
       </a>
@@ -78,7 +79,8 @@ export class PaginationNext extends React.Component<PaginationNextProps> {
     return (
       <a className={classNameBuilder(['pagination-next'])}
          href={this.props.href}
-         {...getEventHandlerFromProps(this.props), disable: this.props.disable}
+         disabled={this.props.disabled}
+         {...getEventHandlerFromProps(this.props)}
          >
         {this.props.children}
       </a>
@@ -103,7 +105,8 @@ export class PaginationLink extends React.Component<PaginationLinkProps> {
         <a className={classNameBuilder(['pagination-link',
                                         (this.props.current ? 'is-current' : '')
                                       ])}
-           {...getEventHandlerFromProps(this.props), disable: this.props.disable}
+           disabled={this.props.disabled}
+           {...getEventHandlerFromProps(this.props)}
            >
           {this.props.children}
         </a>
@@ -117,7 +120,7 @@ export class PaginationEllipsis extends React.Component<PaginationEllipsisProps>
     return (
       <li>
         <span className={classNameBuilder(['pagination-ellipsis'])}>
-          {(this.props.children ? this.props.children : '&hellip;')}
+          {(this.props.children ? this.props.children : '…')}
         </span>
       </li>
     );
