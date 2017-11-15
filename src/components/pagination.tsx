@@ -13,6 +13,7 @@ interface PaginationProps {
 interface PaginationPreviousProps {
   children?: any;
   href?: string;
+  disable?: boolean;
 
   [x: string]: any;
 }
@@ -20,6 +21,7 @@ interface PaginationPreviousProps {
 interface PaginationNextProps {
   children?: any;
   href?: string;
+  disable?: boolean;
 
   [x: string]: any;
 }
@@ -34,6 +36,7 @@ interface PaginationLinkProps {
   children?: any;
   current?: boolean;
   href?: string;
+  disable?: boolean;
 
   [x: string]: any;
 }
@@ -62,7 +65,7 @@ export class PaginationPrevious extends React.Component<PaginationPreviousProps>
     return (
       <a className={classNameBuilder(['pagination-previous'])}
          href={this.props.href}
-         {...getEventHandlerFromProps(this.props)}
+         {...getEventHandlerFromProps(this.props), disable: this.props.disable}
          >
         {this.props.children}
       </a>
@@ -75,7 +78,7 @@ export class PaginationNext extends React.Component<PaginationNextProps> {
     return (
       <a className={classNameBuilder(['pagination-next'])}
          href={this.props.href}
-         {...getEventHandlerFromProps(this.props)}
+         {...getEventHandlerFromProps(this.props), disable: this.props.disable}
          >
         {this.props.children}
       </a>
@@ -100,7 +103,7 @@ export class PaginationLink extends React.Component<PaginationLinkProps> {
         <a className={classNameBuilder(['pagination-link',
                                         (this.props.current ? 'is-current' : '')
                                       ])}
-           {...getEventHandlerFromProps(this.props)}
+           {...getEventHandlerFromProps(this.props), disable: this.props.disable}
            >
           {this.props.children}
         </a>
