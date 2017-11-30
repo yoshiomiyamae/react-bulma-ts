@@ -93,6 +93,12 @@ interface ModalCardTitleProps {
   [x: string]: any;
 }
 
+interface ModalCardBodyProps {
+  children?: any;
+
+  [x: string]: any;
+}
+
 interface ModalCardFootProps {
   children?: any;
 
@@ -126,6 +132,16 @@ export class ModalCardTitle extends React.Component<ModalCardTitleProps> {
                                     ])}>
         {this.props.children}
       </p>
+    );
+  }
+}
+
+export class ModalCardBody extends React.Component<ModalCardBodyProps> {
+  render () {
+    return (
+      <section className={classNameBuilder(['modal-card-foot'])}>
+        {this.props.children}
+      </section>
     );
   }
 }
