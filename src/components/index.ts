@@ -3,7 +3,7 @@ import {Card, CardFooter, CardFooterItem, CardHeader, CardHeaderIcon, CardHeader
 import {Dropdown, DropdownContent, DropdownItem, DropdownMenu, DropdownTrigger} from './dropdown';
 import {Menu, MenuItem, MenuLabel, MenuList} from './menu';
 import {Message, MessageBody, MessageHeader} from './message';
-import {Modal, ModalBackground, ModalCard, ModalCardFoot, ModalCardHead, ModalCardTitle, ModalClose, ModalContent} from './modal';
+import {Modal, ModalBackground, ModalCard, ModalCardFoot, ModalCardHead, ModalCardTitle, ModalClose, ModalContent, ModalCardBody} from './modal';
 import {Navbar, NavbarBrand, NavbarBurger, NavbarDivider, NavbarDropdown, NavbarEnd, NavbarMenu, NavbarItem, NavbarItemTypes, NavbarLink, NavbarStart, NavbarTabs} from './navbar';
 import {Pagination, PaginationEllipsis, PaginationLink, PaginationList, PaginationNext, PaginationPrevious} from './pagination';
 import {Panel, PanelBlock, PanelBlockTypes, PanelTabs} from './panel';
