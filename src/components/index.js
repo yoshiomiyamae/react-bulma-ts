@@ -11,6 +11,7 @@ exports.CardHeader = card_1.CardHeader;
 exports.CardHeaderIcon = card_1.CardHeaderIcon;
 exports.CardHeaderTitle = card_1.CardHeaderTitle;
 exports.CardImage = card_1.CardImage;
+exports.CardContent = card_1.CardContent;
 const dropdown_1 = require("./dropdown");
 exports.Dropdown = dropdown_1.Dropdown;
 exports.DropdownContent = dropdown_1.DropdownContent;
