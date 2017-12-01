@@ -14,6 +14,12 @@ interface CardImageProps {
   [x: string]: any;
 }
 
+interface CardContentProps {
+  children?: any;
+
+  [x: string]: any;
+}
+
 interface CardHeaderProps {
   children?: any;
 
@@ -61,6 +67,16 @@ export class CardImage extends React.Component<CardImageProps> {
   render () {
     return (
       <div className={classNameBuilder(['card-image'])}>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+export class CardContent extends React.Component<CardContentProps> {
+  render () {
+    return (
+      <div className={classNameBuilder(['card-content'])}>
         {this.props.children}
       </div>
     );
