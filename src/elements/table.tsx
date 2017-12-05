@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {classNameBuilder} from '../common';
+import {classNameBuilder, getEventHandlerFromProps} from '../common';
 
 interface TableProps {
   children?: any;
@@ -38,7 +38,9 @@ export class Table extends React.Component<TableProps> {
 export class TableRow extends React.Component<TableRowProps> {
   render () {
     return (
-      <tr className={classNameBuilder([(this.props.seleted ? 'is-selected' : '')])}>
+      <tr className={classNameBuilder([(this.props.seleted ? 'is-selected' : '')])}
+          {...getEventHandlerFromProps(this.props)}
+          >
         {this.props.children}
       </tr>
     );
