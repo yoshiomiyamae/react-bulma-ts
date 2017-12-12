@@ -139,7 +139,7 @@ export class ModalCardTitle extends React.Component<ModalCardTitleProps> {
 export class ModalCardBody extends React.Component<ModalCardBodyProps> {
   render () {
     return (
-      <section className={classNameBuilder(['modal-card-foot'])}>
+      <section className={classNameBuilder(['modal-card-body'])}>
         {this.props.children}
       </section>
     );
