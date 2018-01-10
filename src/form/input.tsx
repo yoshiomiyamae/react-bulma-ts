@@ -7,6 +7,17 @@ export enum InputTypes {
   Password = 'password',
   Email = 'email',
   Tel = 'tel',
+  Search = 'search',
+  Url = 'url',
+  Datetime = 'datetime',
+  Date = 'date',
+  Month = 'month',
+  Week = 'week',
+  Time = 'time',
+  DateTimeLocal = 'datetime-local',
+  Number = 'number',
+  Range = 'range',
+  Color = 'color',
 }
 
 interface InputProps {
