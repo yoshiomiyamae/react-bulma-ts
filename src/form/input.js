@@ -26,6 +26,17 @@ var InputTypes;
     InputTypes["Password"] = "password";
     InputTypes["Email"] = "email";
     InputTypes["Tel"] = "tel";
+    InputTypes["Search"] = "search";
+    InputTypes["Url"] = "url";
+    InputTypes["Datetime"] = "datetime";
+    InputTypes["Date"] = "date";
+    InputTypes["Month"] = "month";
+    InputTypes["Week"] = "week";
+    InputTypes["Time"] = "time";
+    InputTypes["DateTimeLocal"] = "datetime-local";
+    InputTypes["Number"] = "number";
+    InputTypes["Range"] = "range";
+    InputTypes["Color"] = "color";
 })(InputTypes = exports.InputTypes || (exports.InputTypes = {}));
 var Input = (function (_super) {
     __extends(Input, _super);
