@@ -31,8 +31,9 @@ export class Textarea extends React.Component<TextareaProps> {
              maxLength={this.props.maxLength}
              rows={this.props.rows}
              wrap={this.props.wrap}
+             defaultValue={this.props.children}
              {...getEventHandlerFromProps(this.props)}
-             >{this.props.children}</textarea>
+             />
     );
   }
 }
