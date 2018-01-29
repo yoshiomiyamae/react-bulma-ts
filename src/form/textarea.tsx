@@ -32,8 +32,7 @@ export class Textarea extends React.Component<TextareaProps> {
              rows={this.props.rows}
              wrap={this.props.wrap}
              {...getEventHandlerFromProps(this.props)}
-             >
-      </textarea>
+             >{this.props.children}</textarea>
     );
   }
 }
