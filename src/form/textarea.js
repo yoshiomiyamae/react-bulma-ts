@@ -30,7 +30,7 @@ var Textarea = (function (_super) {
                 this.props.color,
                 this.props.size,
                 this.props.state,
-            ]), placeholder: this.props.placeholder, readOnly: this.props.readonly, cols: this.props.cols, maxLength: this.props.maxLength, rows: this.props.rows, wrap: this.props.wrap }, common_1.getEventHandlerFromProps(this.props))));
+            ]), placeholder: this.props.placeholder, readOnly: this.props.readonly, cols: this.props.cols, maxLength: this.props.maxLength, rows: this.props.rows, wrap: this.props.wrap }, common_1.getEventHandlerFromProps(this.props)), this.props.children));
     };
     return Textarea;
 }(React.Component));
