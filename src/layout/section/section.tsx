@@ -1,6 +1,6 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Size } from '../common';
-import { TileChild } from './tile/tile-child';
+import { classNameBuilder, BaseComponent, BaseProps, Size } from '../../common';
+import { TileChild } from '../tile/tile-child';
 
 interface SectionProps extends BaseProps<HTMLElement> {
   children?: React.ReactNode;

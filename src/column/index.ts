@@ -1,6 +1,5 @@
 export * from './columns';
 export * from './column';
-export * from './column-alignment';
 export * from './column-gap';
 export * from './column-multiline';
 export * from './column-offset';

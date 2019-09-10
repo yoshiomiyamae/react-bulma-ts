@@ -1,12 +1,11 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Responsiveness } from '../common';
+import { classNameBuilder, BaseComponent, BaseProps, Responsiveness, VerticalAlignment, HorizontalAlignment } from '../common';
 import { ColumnGap } from './column-gap';
 import { ColumnMultiline } from './column-multiline';
-import { ColumnVerticalAlignment, ColumnHorizontalAlignment } from './column-alignment';
 import { TileChild } from '../layout/tile/tile-child';
 
-interface ColumnsProps extends BaseProps {
-  options?: (Responsiveness | ColumnGap | ColumnMultiline | ColumnVerticalAlignment | ColumnHorizontalAlignment | string)[];
+interface ColumnsProps extends BaseProps<HTMLDivElement> {
+  options?: (Responsiveness | ColumnGap | ColumnMultiline | VerticalAlignment | HorizontalAlignment | string)[];
 }
 
 export class Columns extends BaseComponent<ColumnsProps> {

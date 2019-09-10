@@ -1,7 +1,7 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../common';
-import { TileChild } from '../layout/tile/tile-child';
-import { State } from './state';
+import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../../common';
+import { TileChild } from '../../layout/tile/tile-child';
+import { State } from '../../common/state';
 
 interface SelectProps extends BaseProps<HTMLSelectElement> {
   options?: (Color | Size | State | string)[];

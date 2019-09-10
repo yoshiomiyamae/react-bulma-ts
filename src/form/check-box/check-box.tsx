@@ -1,6 +1,6 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../common';
-import { TileChild } from '../layout/tile/tile-child';
+import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../../common';
+import { TileChild } from '../../layout/tile/tile-child';
 
 interface CheckBoxProps extends BaseProps<HTMLInputElement> {
   disabled?: boolean;

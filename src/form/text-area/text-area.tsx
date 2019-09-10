@@ -1,8 +1,8 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../common';
-import { TileChild } from '../layout/tile/tile-child';
-import { State } from './state';
-import { TextAreaHasFixedSize } from './text-area-fixxed-size';
+import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../../common';
+import { TileChild } from '../../layout/tile/tile-child';
+import { State } from '../../common/state';
+import { TextAreaHasFixedSize } from './text-area-fixed-size';
 
 interface TextAreaProps extends BaseProps<HTMLTextAreaElement> {
   options?: (Color | Size | State | string)[];

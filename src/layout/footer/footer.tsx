@@ -1,6 +1,6 @@
 import React from 'react';
-import { BaseComponent, classNameBuilder } from '../common';
-import { TileChild } from './tile/tile-child';
+import { BaseComponent, classNameBuilder } from '../../common';
+import { TileChild } from '../tile/tile-child';
 
 export class Footer extends BaseComponent {
   render () {

@@ -1,15 +1,15 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../common';
-import { TileChild } from '../layout/tile/tile-child';
-import { State } from './state';
+import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../../common';
+import { TileChild } from '../../layout/tile/tile-child';
+import { State } from '../../common/state';
 
-interface InputProps extends BaseProps<HTMLInputElement> {
+interface FileProps extends BaseProps<HTMLInputElement> {
   options?: (Color | Size | State | string)[];
   disabled?: boolean;
   readOnly?: boolean;
 }
 
-export class Input extends BaseComponent<InputProps> {
+export class File extends BaseComponent<FileProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
     return <input

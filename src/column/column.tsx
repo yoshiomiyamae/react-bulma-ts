@@ -5,7 +5,7 @@ import { ColumnOffset } from './column-offset';
 import { ColumnThickness } from './column-thickness';
 import { TileChild } from '../layout/tile/tile-child';
 
-interface ColumnProps extends BaseProps {
+interface ColumnProps extends BaseProps<HTMLDivElement> {
   options?: (ColumnSize | ColumnOffset | ColumnThickness | string)[];
 }
 
