@@ -1,13 +1,14 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps} from '../../common';
+import { classNameBuilder, BaseComponent, BaseProps, State} from '../../common';
 
 interface BreadcrumbItemProps extends BaseProps<HTMLLIElement> {
-  active?: boolean;
+  options?: (State)[];
 }
 
 export class BreadcrumbItem extends BaseComponent<BreadcrumbItemProps> {
-  render () {
-    return <li className={classNameBuilder([this.props.active ? 'is-active' : null])}>
+  render() {
+    const options = this.props.options ? this.props.options : [];
+    return <li className={classNameBuilder([...options])}>
       {this.props.children}
     </li>
   }

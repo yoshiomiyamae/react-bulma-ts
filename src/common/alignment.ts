@@ -7,9 +7,9 @@ export enum HorizontalAlignment {
 
 export enum VerticalAlignment {
   Default = '',
-  Left = 'is-vleft',
+  Top = 'is-top',
   Center = 'is-vcentered',
-  Right = 'is-vright',
+  Bottom = 'is-bottom',
 }
 
 export enum TextAlignment {
