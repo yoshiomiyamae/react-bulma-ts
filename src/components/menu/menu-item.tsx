@@ -1,10 +1,10 @@
 import React from 'react';
 import { BaseComponent, BaseProps } from '../../common';
 
-interface MenuListProps extends BaseProps<HTMLLIElement> {
+interface MenuItemProps extends BaseProps<HTMLLIElement> {
 }
 
-export class MenuList extends BaseComponent<MenuListProps> {
+export class MenuItem extends BaseComponent<MenuItemProps> {
   render() {
     return <li>
       {this.props.children}

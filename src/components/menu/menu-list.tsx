@@ -1,6 +1,5 @@
 import React from 'react';
 import { BaseComponent, BaseProps, classNameBuilder } from '../../common';
-import { TileChild } from '../../layout/tile/tile-child';
 
 interface MenuListProps extends BaseProps<HTMLUListElement> {
 }
