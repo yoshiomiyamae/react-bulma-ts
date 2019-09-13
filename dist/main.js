@@ -3529,6 +3529,24 @@ exports.CheckBox = CheckBox;
 
 /***/ }),
 
+/***/ "./src/form/check-box/index.ts":
+/*!*************************************!*\
+  !*** ./src/form/check-box/index.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./check-box */ "./src/form/check-box/check-box.tsx"));
+
+
+/***/ }),
+
 /***/ "./src/form/control/control.tsx":
 /*!**************************************!*\
   !*** ./src/form/control/control.tsx ***!
@@ -3546,7 +3564,8 @@ const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
 const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
 class Control extends common_1.BaseComponent {
     render() {
-        return react_1.default.createElement("div", Object.assign({ className: "control" }, this.props), this.props.children);
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(["control", ...options]) }, this.props), this.props.children);
     }
 }
 exports.Control = Control;
@@ -3587,9 +3606,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
 const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class Field extends common_1.BaseComponent {
     render() {
-        return react_1.default.createElement("div", Object.assign({ className: "field" }, this.props), this.props.children);
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(["field", ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
     }
 }
 exports.Field = Field;
@@ -3642,6 +3663,24 @@ class File extends common_1.BaseComponent {
     }
 }
 exports.File = File;
+
+
+/***/ }),
+
+/***/ "./src/form/file/index.ts":
+/*!********************************!*\
+  !*** ./src/form/file/index.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./file */ "./src/form/file/file.tsx"));
 
 
 /***/ }),
@@ -3702,15 +3741,33 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(__webpack_require__(/*! ./check-box/check-box */ "./src/form/check-box/check-box.tsx"));
-__export(__webpack_require__(/*! ./file/file */ "./src/form/file/file.tsx"));
-__export(__webpack_require__(/*! ./input/input */ "./src/form/input/input.tsx"));
-__export(__webpack_require__(/*! ./radio-button/radio-button */ "./src/form/radio-button/radio-button.tsx"));
-__export(__webpack_require__(/*! ./select/select */ "./src/form/select/select.tsx"));
-__export(__webpack_require__(/*! ./text-area/text-area */ "./src/form/text-area/text-area.tsx"));
+__export(__webpack_require__(/*! ./check-box */ "./src/form/check-box/index.ts"));
+__export(__webpack_require__(/*! ./file */ "./src/form/file/index.ts"));
+__export(__webpack_require__(/*! ./input */ "./src/form/input/index.ts"));
+__export(__webpack_require__(/*! ./radio-button */ "./src/form/radio-button/index.ts"));
+__export(__webpack_require__(/*! ./select */ "./src/form/select/index.ts"));
+__export(__webpack_require__(/*! ./text-area */ "./src/form/text-area/index.ts"));
 __export(__webpack_require__(/*! ./control */ "./src/form/control/index.ts"));
 __export(__webpack_require__(/*! ./field */ "./src/form/field/index.ts"));
 __export(__webpack_require__(/*! ./help */ "./src/form/help/index.ts"));
+
+
+/***/ }),
+
+/***/ "./src/form/input/index.ts":
+/*!*********************************!*\
+  !*** ./src/form/input/index.ts ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./input */ "./src/form/input/input.tsx"));
 
 
 /***/ }),
@@ -3746,6 +3803,24 @@ exports.Input = Input;
 
 /***/ }),
 
+/***/ "./src/form/radio-button/index.ts":
+/*!****************************************!*\
+  !*** ./src/form/radio-button/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./radio-button */ "./src/form/radio-button/radio-button.tsx"));
+
+
+/***/ }),
+
 /***/ "./src/form/radio-button/radio-button.tsx":
 /*!************************************************!*\
   !*** ./src/form/radio-button/radio-button.tsx ***!
@@ -3774,6 +3849,24 @@ exports.RadioButton = RadioButton;
 
 /***/ }),
 
+/***/ "./src/form/select/index.ts":
+/*!**********************************!*\
+  !*** ./src/form/select/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./select */ "./src/form/select/select.tsx"));
+
+
+/***/ }),
+
 /***/ "./src/form/select/select.tsx":
 /*!************************************!*\
   !*** ./src/form/select/select.tsx ***!
@@ -3798,6 +3891,25 @@ class Select extends common_1.BaseComponent {
     }
 }
 exports.Select = Select;
+
+
+/***/ }),
+
+/***/ "./src/form/text-area/index.ts":
+/*!*************************************!*\
+  !*** ./src/form/text-area/index.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./text-area */ "./src/form/text-area/text-area.tsx"));
+__export(__webpack_require__(/*! ./text-area-fixed-size */ "./src/form/text-area/text-area-fixed-size.ts"));
 
 
 /***/ }),
