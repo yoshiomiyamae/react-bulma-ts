@@ -4,3 +4,6 @@ export * from './input/input';
 export * from './radio-button/radio-button';
 export * from './select/select';
 export * from './text-area/text-area';
+export * from './control';
+export * from './field';
+export * from './help'

@@ -1,10 +1,10 @@
 import React from 'react';
-import { classNameBuilder, BaseComponent, BaseProps, TextColor } from '../../common';
+import { classNameBuilder, BaseComponent, BaseProps, TextColor, Size, HorizontalAlignment } from '../../common';
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface IconProps extends BaseProps<HTMLSpanElement> {
   iconName: string;
-  options?: (TextColor)[];
+  options?: (TextColor | Size | HorizontalAlignment)[];
 }
 
 export class Icon extends BaseComponent<IconProps> {
