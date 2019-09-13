@@ -6,7 +6,7 @@ interface TableFooterProps extends BaseProps<HTMLTableSectionElement> {
 
 export class TableFooter extends BaseComponent<TableFooterProps> {
   render () {
-    return <tfoot>
+    return <tfoot {...this.props}>
         {this.props.children}
     </tfoot>
   }

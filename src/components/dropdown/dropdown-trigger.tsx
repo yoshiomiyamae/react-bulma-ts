@@ -6,7 +6,7 @@ interface DropdownTriggerProps extends BaseProps<HTMLDivElement> {
 
 export class DropdownTrigger extends BaseComponent<DropdownTriggerProps> {
   render() {
-    return <div className="dropdown-trigger">
+    return <div className="dropdown-trigger" {...this.props}>
       {this.props.children}
     </div>
   }

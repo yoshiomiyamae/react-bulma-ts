@@ -11,7 +11,7 @@ export interface ContentProps extends BaseProps<HTMLDivElement> {
 export class Content extends BaseComponent<ContentProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <div className={classNameBuilder(['content', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    return <div className={classNameBuilder(['content', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       {this.props.children}
     </div>
   }

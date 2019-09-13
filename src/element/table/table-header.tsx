@@ -6,7 +6,7 @@ interface TableHeaderProps extends BaseProps<HTMLTableSectionElement> {
 
 export class TableHeader extends BaseComponent<TableHeaderProps> {
   render () {
-    return <thead>
+    return <thead {...this.props}>
         {this.props.children}
     </thead>
   }

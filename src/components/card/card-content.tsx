@@ -6,7 +6,7 @@ interface CardContentProps extends BaseProps<HTMLDivElement> {
 
 export class CardContent extends BaseComponent<CardContentProps> {
   render () {
-    return <div className="card-content">
+    return <div className="card-content" {...this.props}>
       {this.props.children}
     </div>
   }

@@ -6,7 +6,7 @@ interface MenuItemProps extends BaseProps<HTMLLIElement> {
 
 export class MenuItem extends BaseComponent<MenuItemProps> {
   render() {
-    return <li>
+    return <li {...this.props}>
       {this.props.children}
     </li>
   }

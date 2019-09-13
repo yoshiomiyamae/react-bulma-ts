@@ -6,4 +6,5 @@ export enum State {
   Active = 'is-active',
   Loading = 'is-loading',
   Static = 'is-static',
+  Current = 'is-current',
 }

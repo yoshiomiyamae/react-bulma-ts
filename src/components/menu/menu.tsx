@@ -7,7 +7,7 @@ interface MenuProps extends BaseProps<HTMLElement> {
 
 export class Menu extends BaseComponent<MenuProps> {
   render() {
-    return <aside className={classNameBuilder(["menu", (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    return <aside className={classNameBuilder(["menu", (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       {this.props.children}
     </aside>
   }

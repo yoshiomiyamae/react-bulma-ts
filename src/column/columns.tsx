@@ -11,7 +11,7 @@ interface ColumnsProps extends BaseProps<HTMLDivElement> {
 export class Columns extends BaseComponent<ColumnsProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <div className={classNameBuilder(['columns', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    return <div className={classNameBuilder(['columns', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       {this.props.children}
     </div>
   }

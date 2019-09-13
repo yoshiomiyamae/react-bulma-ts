@@ -12,7 +12,7 @@ interface NotificationProps extends BaseProps<HTMLDivElement> {
 export class Notification extends BaseComponent<NotificationProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <div className={classNameBuilder(['notification', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    return <div className={classNameBuilder(['notification', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       <Delete buttonType={ButtonType.Button} {...this.props.deleteProps}/>
       {this.props.children}
     </div>

@@ -6,7 +6,7 @@ interface MenuLabelProps extends BaseProps<HTMLParagraphElement> {
 
 export class MenuLabel extends BaseComponent<MenuLabelProps> {
   render() {
-    return <p className="menu-label">
+    return <p className="menu-label" {...this.props}>
       {this.props.children}
     </p>
   }

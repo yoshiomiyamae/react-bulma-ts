@@ -12,7 +12,7 @@ interface ImageProps extends BaseProps<HTMLElement> {
 export class Image extends BaseComponent<ImageProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <figure className={classNameBuilder(['image', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    return <figure className={classNameBuilder(['image', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       <img className={this.props.rounded ? 'is-rounded': ''} src={this.props.src}/>
     </figure>
   }

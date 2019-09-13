@@ -6,7 +6,7 @@ interface TableCellProps extends BaseProps<HTMLTableCellElement> {
 
 export class TableCell extends BaseComponent<TableCellProps> {
   render () {
-    return <td>
+    return <td {...this.props}>
         {this.props.children}
     </td>
   }

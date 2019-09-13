@@ -8,7 +8,8 @@ interface MessageProps extends BaseProps<HTMLElement> {
 
 export class Message extends BaseComponent<MessageProps> {
   render() {
-    return <article className={classNameBuilder(["message", (this.props.isTileChild ? TileChild.TileChild : null)])}>
+    const options = this.props.options ? this.props.options : [];
+    return <article className={classNameBuilder(["message", ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       {this.props.children}
     </article>
   }

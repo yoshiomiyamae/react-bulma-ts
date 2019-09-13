@@ -7,7 +7,7 @@ interface CardHeaderTitleProps extends BaseProps<HTMLParagraphElement> {
 
 export class CardHeaderTitle extends BaseComponent<CardHeaderTitleProps> {
   render () {
-    return <p className={classNameBuilder(['card-header-title', this.props.alignment])}>
+    return <p className={classNameBuilder(['card-header-title', this.props.alignment])} {...this.props}>
       {this.props.children}
     </p>
   }

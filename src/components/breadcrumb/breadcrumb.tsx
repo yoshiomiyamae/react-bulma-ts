@@ -18,7 +18,7 @@ export class Breadcrumb extends BaseComponent<BreadcrumbProps> {
         this.props.separator,
         (this.props.isTileChild ? TileChild.TileChild : null)
       ])}
-      >
+      {...this.props}>
         <ul>
           {this.props.children}
         </ul>

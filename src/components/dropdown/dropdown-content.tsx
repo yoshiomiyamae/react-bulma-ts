@@ -6,7 +6,7 @@ interface DropdownContentProps extends BaseProps<HTMLDivElement> {
 
 export class DropdownContent extends BaseComponent<DropdownContentProps> {
   render() {
-    return <div className="dropdown-content">
+    return <div className="dropdown-content" {...this.props}>
       {this.props.children}
     </div>
   }

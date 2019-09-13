@@ -6,7 +6,7 @@ interface MenuListProps extends BaseProps<HTMLUListElement> {
 
 export class MenuList extends BaseComponent<MenuListProps> {
   render() {
-    return <ul className="menu-list">
+    return <ul className="menu-list" {...this.props}>
       {this.props.children}
     </ul>
   }

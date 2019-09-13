@@ -6,7 +6,7 @@ interface TableBodyProps extends BaseProps<HTMLTableSectionElement> {
 
 export class TableBody extends BaseComponent<TableBodyProps> {
   render () {
-    return <tbody>
+    return <tbody {...this.props}>
         {this.props.children}
     </tbody>
   }

@@ -7,7 +7,7 @@ interface TableRowProps extends BaseProps<HTMLTableRowElement> {
 
 export class TableRow extends BaseComponent<TableRowProps> {
   render () {
-    return <tr className={this.props.selected ? 'is-selected' : ''}>
+    return <tr className={this.props.selected ? 'is-selected' : ''} {...this.props}>
         {this.props.children}
     </tr>
   }

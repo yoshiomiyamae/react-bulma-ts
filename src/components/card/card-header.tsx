@@ -6,7 +6,7 @@ interface CardHeaderProps extends BaseProps<HTMLElement> {
 
 export class CardHeader extends BaseComponent<CardHeaderProps> {
   render () {
-    return <header className="card-header">
+    return <header className="card-header" {...this.props}>
       {this.props.children}
     </header>
   }

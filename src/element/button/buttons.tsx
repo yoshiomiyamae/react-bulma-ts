@@ -11,7 +11,7 @@ interface ButtonsProps extends BaseProps<HTMLDivElement> {
 export class Buttons extends BaseComponent<ButtonsProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <div className={classNameBuilder(['buttons', ...options, (this.props.isTileChild ? TileChild.TileChild : null), (this.props.hasAddons ? ButtonAddon.HasAddons : null)])}>
+    return <div className={classNameBuilder(['buttons', ...options, (this.props.isTileChild ? TileChild.TileChild : null), (this.props.hasAddons ? ButtonAddon.HasAddons : null)])} {...this.props}>
       {this.props.children}
     </div>
   }
