@@ -3547,6 +3547,26 @@ __export(__webpack_require__(/*! ./check-box */ "./src/form/check-box/check-box.
 
 /***/ }),
 
+/***/ "./src/form/control/control-option.ts":
+/*!********************************************!*\
+  !*** ./src/form/control/control-option.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var ControlOption;
+(function (ControlOption) {
+    ControlOption["HasIconsLeft"] = "has-icons-left";
+    ControlOption["HasIconsRight"] = "has-icons-right";
+    ControlOption["Expanded"] = "is-expanded";
+})(ControlOption = exports.ControlOption || (exports.ControlOption = {}));
+
+
+/***/ }),
+
 /***/ "./src/form/control/control.tsx":
 /*!**************************************!*\
   !*** ./src/form/control/control.tsx ***!
@@ -3587,6 +3607,30 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(/*! ./control */ "./src/form/control/control.tsx"));
+__export(__webpack_require__(/*! ./control-option */ "./src/form/control/control-option.ts"));
+
+
+/***/ }),
+
+/***/ "./src/form/field/field-option.ts":
+/*!****************************************!*\
+  !*** ./src/form/field/field-option.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var FieldOption;
+(function (FieldOption) {
+    FieldOption["Grouped"] = "is-grouped";
+    FieldOption["GroupedCentered"] = "is-grouped-centered";
+    FieldOption["GroupedRight"] = "is-grouped-right";
+    FieldOption["HasAddons"] = "has-addons";
+    FieldOption["HasAddonsCentered"] = "has-addons-centered";
+    FieldOption["HasAddonsRight"] = "has-addons-right";
+})(FieldOption = exports.FieldOption || (exports.FieldOption = {}));
 
 
 /***/ }),
@@ -3632,6 +3676,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(/*! ./field */ "./src/form/field/field.tsx"));
+__export(__webpack_require__(/*! ./field-option */ "./src/form/field/field-option.ts"));
 
 
 /***/ }),
