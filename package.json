@@ -2,6 +2,7 @@
   "name": "react-bulma",
   "version": "2.0.0",
   "main": "dist/main.js",
+  "types": "src/index.ts",
   "repository": "https://github.com/yoshiomiyamae/react-bulma.git",
   "author": "Yoshio Miyamae <yoshio.miyamae@famoce-succellion.com>",
   "license": "MIT",
