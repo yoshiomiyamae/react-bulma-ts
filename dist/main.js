@@ -2694,33 +2694,6 @@ __export(__webpack_require__(/*! ./button-type */ "./src/element/button/button-t
 
 /***/ }),
 
-/***/ "./src/element/content/content-type.ts":
-/*!*********************************************!*\
-  !*** ./src/element/content/content-type.ts ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var ContentType;
-(function (ContentType) {
-    ContentType["Paragraph"] = "p";
-    ContentType["UList"] = "ul";
-    ContentType["OList"] = "ol";
-    ContentType["DList"] = "dl";
-    ContentType["Heading1"] = "h1";
-    ContentType["Heading2"] = "h2";
-    ContentType["Heading3"] = "h3";
-    ContentType["Heading4"] = "h4";
-    ContentType["Heading5"] = "h5";
-    ContentType["Heading6"] = "h6";
-})(ContentType = exports.ContentType || (exports.ContentType = {}));
-
-
-/***/ }),
-
 /***/ "./src/element/content/content.tsx":
 /*!*****************************************!*\
   !*** ./src/element/content/content.tsx ***!
@@ -2762,7 +2735,6 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(/*! ./content */ "./src/element/content/content.tsx"));
-__export(__webpack_require__(/*! ./content-type */ "./src/element/content/content-type.ts"));
 
 
 /***/ }),
@@ -2835,8 +2807,7 @@ const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./
 class Icon extends common_1.BaseComponent {
     render() {
         const options = this.props.options ? this.props.options : [];
-        return react_1.default.createElement("span", Object.assign({ className: common_1.classNameBuilder(['buttons', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props),
-            react_1.default.createElement("i", { className: this.props.iconName }));
+        return react_1.default.createElement("span", Object.assign({ className: common_1.classNameBuilder(['buttons', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
     }
 }
 exports.Icon = Icon;
@@ -3490,7 +3461,7 @@ class Title extends common_1.BaseComponent {
         ;
         return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.size}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'tag',
-                `is-${this.props.size}`,
+                `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
             ]) }), this.props.children);
@@ -3612,6 +3583,59 @@ __export(__webpack_require__(/*! ./control-option */ "./src/form/control/control
 
 /***/ }),
 
+/***/ "./src/form/field/field-body.tsx":
+/*!***************************************!*\
+  !*** ./src/form/field/field-body.tsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class FieldBody extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("div", { className: common_1.classNameBuilder(['field-label', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props.children);
+    }
+}
+exports.FieldBody = FieldBody;
+
+
+/***/ }),
+
+/***/ "./src/form/field/field-label.tsx":
+/*!****************************************!*\
+  !*** ./src/form/field/field-label.tsx ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class FieldLabel extends common_1.BaseComponent {
+    render() {
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("div", { className: common_1.classNameBuilder(['field-label', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props.children);
+    }
+}
+exports.FieldLabel = FieldLabel;
+
+
+/***/ }),
+
 /***/ "./src/form/field/field-option.ts":
 /*!****************************************!*\
   !*** ./src/form/field/field-option.ts ***!
@@ -3677,6 +3701,8 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(/*! ./field */ "./src/form/field/field.tsx"));
 __export(__webpack_require__(/*! ./field-option */ "./src/form/field/field-option.ts"));
+__export(__webpack_require__(/*! ./field-body */ "./src/form/field/field-body.tsx"));
+__export(__webpack_require__(/*! ./field-label */ "./src/form/field/field-label.tsx"));
 
 
 /***/ }),

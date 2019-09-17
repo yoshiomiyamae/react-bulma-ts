@@ -1,10 +1,8 @@
 import React from 'react';
 import { classNameBuilder, BaseComponent, BaseProps, Size } from '../../common';
 import { TileChild } from '../../layout/tile/tile-child';
-import { ContentType } from './content-type';
 
 export interface ContentProps extends BaseProps<HTMLDivElement> {
-  contentType: ContentType;
   options?: (Size)[];
 }
 

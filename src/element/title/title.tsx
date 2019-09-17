@@ -6,7 +6,6 @@ import { TitleType } from './title-type';
 interface TitleProps extends BaseProps<HTMLHeadingElement | HTMLParagraphElement> {
   titleType: TitleType;
   level: number;
-  size: number;
   spaced?: boolean;
 }
 
@@ -19,7 +18,7 @@ export class Title extends BaseComponent<TitleProps> {
         className: classNameBuilder(
           [
             'tag',
-            `is-${this.props.size}`,
+            `is-${this.props.level}`,
             (this.props.spaced ? 'is-spaced' : null),
             (this.props.isTileChild ? TileChild.TileChild : null),
           ]
