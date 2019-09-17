@@ -5,3 +5,5 @@ export * from './card-header';
 export * from './card-header-icon';
 export * from './card-header-title';
 export * from './card-image';
+export * from './card-option';
+export * from './card-footer-item';

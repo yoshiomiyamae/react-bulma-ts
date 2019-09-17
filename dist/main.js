@@ -1124,6 +1124,31 @@ exports.CardHeaderIcon = CardHeaderIcon;
 
 /***/ }),
 
+/***/ "./src/components/card/card-header-item.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/card/card-header-item.tsx ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+class CardFooterItem extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement(this.props.itemType, Object.assign({}, this.props, { className: 'card-footer-item' }), this.props.children);
+    }
+}
+exports.CardFooterItem = CardFooterItem;
+
+
+/***/ }),
+
 /***/ "./src/components/card/card-header-title.tsx":
 /*!***************************************************!*\
   !*** ./src/components/card/card-header-title.tsx ***!
@@ -1199,6 +1224,25 @@ exports.CardImage = CardImage;
 
 /***/ }),
 
+/***/ "./src/components/card/card-option.ts":
+/*!********************************************!*\
+  !*** ./src/components/card/card-option.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var CardFooterItemType;
+(function (CardFooterItemType) {
+    CardFooterItemType["Anchor"] = "a";
+    CardFooterItemType["Paragraph"] = "p";
+})(CardFooterItemType = exports.CardFooterItemType || (exports.CardFooterItemType = {}));
+
+
+/***/ }),
+
 /***/ "./src/components/card/card.tsx":
 /*!**************************************!*\
   !*** ./src/components/card/card.tsx ***!
@@ -1245,6 +1289,8 @@ __export(__webpack_require__(/*! ./card-header */ "./src/components/card/card-he
 __export(__webpack_require__(/*! ./card-header-icon */ "./src/components/card/card-header-icon.tsx"));
 __export(__webpack_require__(/*! ./card-header-title */ "./src/components/card/card-header-title.tsx"));
 __export(__webpack_require__(/*! ./card-image */ "./src/components/card/card-image.tsx"));
+__export(__webpack_require__(/*! ./card-header-item */ "./src/components/card/card-header-item.tsx"));
+__export(__webpack_require__(/*! ./card-option */ "./src/components/card/card-option.ts"));
 
 
 /***/ }),
@@ -3821,6 +3867,7 @@ __export(__webpack_require__(/*! ./text-area */ "./src/form/text-area/index.ts")
 __export(__webpack_require__(/*! ./control */ "./src/form/control/index.ts"));
 __export(__webpack_require__(/*! ./field */ "./src/form/field/index.ts"));
 __export(__webpack_require__(/*! ./help */ "./src/form/help/index.ts"));
+__export(__webpack_require__(/*! ./label */ "./src/form/label/index.ts"));
 
 
 /***/ }),
@@ -3870,6 +3917,51 @@ class Input extends common_1.BaseComponent {
     }
 }
 exports.Input = Input;
+
+
+/***/ }),
+
+/***/ "./src/form/label/index.ts":
+/*!*********************************!*\
+  !*** ./src/form/label/index.ts ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./label */ "./src/form/label/label.tsx"));
+
+
+/***/ }),
+
+/***/ "./src/form/label/label.tsx":
+/*!**********************************!*\
+  !*** ./src/form/label/label.tsx ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class Label extends common_1.BaseComponent {
+    render() {
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("label", { className: common_1.classNameBuilder(['label', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props.children);
+    }
+}
+exports.Label = Label;
 
 
 /***/ }),

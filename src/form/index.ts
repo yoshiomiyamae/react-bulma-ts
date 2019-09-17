@@ -7,3 +7,4 @@ export * from './text-area';
 export * from './control';
 export * from './field';
 export * from './help'
+export * from './label';
