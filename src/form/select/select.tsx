@@ -4,7 +4,7 @@ import { TileChild } from '../../layout/tile/tile-child';
 import { State } from '../../common/state';
 
 interface SelectProps extends BaseProps<HTMLSelectElement> {
-  options?: (Color | Size | State | string)[];
+  options?: (Color | Size | State | string | null | undefined)[];
   disabled?: boolean;
   readOnly?: boolean;
 }

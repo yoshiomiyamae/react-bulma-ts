@@ -5,7 +5,7 @@ import { TileDirection } from './tile-direction';
 import { TileChild } from '../tile/tile-child';
 
 interface TileProps extends BaseProps<HTMLDivElement> {
-  options?: (TileContextual | TileDirection | string)[];
+  options?: (TileContextual | TileDirection | string | null | undefined)[];
 }
 
 export class Tile extends BaseComponent<TileProps> {

@@ -4,7 +4,7 @@ import { TileChild } from '../tile/tile-child';
 
 interface LevelProps extends BaseProps<HTMLDivElement> {
   children?: React.ReactNode;
-  options?: (Responsiveness | string)[];
+  options?: (Responsiveness | string | null | undefined)[];
 }
 
 export class Level extends BaseComponent<LevelProps> {

@@ -3,7 +3,7 @@ import { BaseComponent, BaseProps, classNameBuilder, State } from '../../common'
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface TabProps extends BaseProps<HTMLLIElement> {
-  options?: (State)[];
+  options?: (State | null | undefined)[];
 }
 
 export class Tab extends BaseComponent<TabProps> {

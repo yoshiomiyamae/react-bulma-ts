@@ -5,7 +5,7 @@ import { ButtonType } from '../button/button-type';
 
 export interface DeleteProps extends BaseProps<HTMLAnchorElement | HTMLButtonElement | HTMLInputElement | HTMLSpanElement> {
   buttonType: ButtonType;
-  options?: (Size)[];
+  options?: (Size | null | undefined)[];
 }
 
 export class Delete extends BaseComponent<DeleteProps> {

@@ -4,7 +4,7 @@ import { DropdownOption } from './dropdown-option';
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface DropdownProps extends BaseProps<HTMLDivElement> {
-  options?: (State | Ability | HorizontalAlignment | DropdownOption)[]
+  options?: (State | Ability | HorizontalAlignment | DropdownOption | null | undefined)[];
 }
 
 export class Dropdown extends BaseComponent<DropdownProps> {

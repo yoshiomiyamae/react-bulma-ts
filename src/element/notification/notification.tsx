@@ -5,7 +5,7 @@ import { Delete } from '../delete';
 import { ButtonType } from '../button';
 
 interface NotificationProps extends BaseProps<HTMLDivElement> {
-  options?: (Color)[];
+  options?: (Color | null | undefined)[];
   deleteProps?: {[key: string]: any};
 }
 

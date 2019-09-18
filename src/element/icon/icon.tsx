@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps, TextColor, Size, Horizontal
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface IconProps extends BaseProps<HTMLSpanElement> {
-  options?: (TextColor | Size | HorizontalAlignment)[];
+  options?: (TextColor | Size | HorizontalAlignment | null | undefined)[];
 }
 
 export class Icon extends BaseComponent<IconProps> {

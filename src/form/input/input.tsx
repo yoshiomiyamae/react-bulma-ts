@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps, Color, Size, State } from '
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface InputProps extends BaseProps<HTMLInputElement> {
-  options?: (Color | Size | State | string)[];
+  options?: (Color | Size | State | string | null | undefined)[];
   disabled?: boolean;
   readOnly?: boolean;
 }

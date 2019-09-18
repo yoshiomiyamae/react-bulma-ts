@@ -5,7 +5,7 @@ import { ColumnMultiline } from './column-multiline';
 import { TileChild } from '../layout/tile/tile-child';
 
 interface ColumnsProps extends BaseProps<HTMLDivElement> {
-  options?: (Responsiveness | ColumnGap | ColumnMultiline | VerticalAlignment | HorizontalAlignment | string)[];
+  options?: (Responsiveness | ColumnGap | ColumnMultiline | VerticalAlignment | HorizontalAlignment | string | null | undefined)[];
 }
 
 export class Columns extends BaseComponent<ColumnsProps> {

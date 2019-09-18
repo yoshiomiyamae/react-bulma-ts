@@ -3,7 +3,7 @@ import { classNameBuilder, Color, Gradient, Size, BaseComponent, BaseProps } fro
 import { TileChild } from '../tile/tile-child';
 
 interface HeroProps extends BaseProps<HTMLElement> {
-  options?: (Color | Gradient | Size | string)[];
+  options?: (Color | Gradient | Size | string | null | undefined)[];
 }
 
 export class Hero extends BaseComponent<HeroProps> {

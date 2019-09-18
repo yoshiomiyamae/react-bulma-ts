@@ -3,8 +3,8 @@ import { BaseComponent, BaseProps, classNameBuilder, State } from '../../common'
 import { DropDownItemType } from './dropdown-item-type';
 
 interface DropdownItemProps extends BaseProps<HTMLDivElement | HTMLAnchorElement> {
-  itemType: DropDownItemType
-  options?: (State)[];
+  itemType: DropDownItemType;
+  options?: (State | null | undefined)[];
 }
 
 export class DropdownItemm extends BaseComponent<DropdownItemProps> {

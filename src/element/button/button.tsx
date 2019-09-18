@@ -5,7 +5,7 @@ import { ButtonType } from './button-type';
 
 export interface ButtonProps extends BaseProps<HTMLAnchorElement | HTMLButtonElement | HTMLInputElement | HTMLSpanElement> {
   buttonType: ButtonType;
-  options?: (Color | Size | State | string)[];
+  options?: (Color | Size | State | string | null | undefined)[];
 }
 
 export class Button extends BaseComponent<ButtonProps> {

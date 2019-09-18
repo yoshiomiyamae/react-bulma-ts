@@ -6,7 +6,7 @@ import { ButtonType } from '../button';
 
 interface TagProps extends BaseProps<HTMLAnchorElement | HTMLButtonElement | HTMLInputElement | HTMLSpanElement> {
   buttonType: ButtonType;
-  options?: (Color | Size | TagOption)[];
+  options?: (Color | Size | TagOption | null | undefined)[];
 }
 
 export class Tag extends BaseComponent<TagProps> {

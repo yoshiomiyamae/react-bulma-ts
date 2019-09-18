@@ -4,7 +4,7 @@ import { LevelTextHolizontalAlignment } from './level-alignment';
 import { TileChild } from '../tile/tile-child';
 
 interface LevelItemProps extends BaseProps<HTMLDivElement> {
-  options?: (LevelTextHolizontalAlignment | string)[];
+  options?: (LevelTextHolizontalAlignment | string | null | undefined)[];
 }
 
 export class LevelItem extends BaseComponent<LevelItemProps> {

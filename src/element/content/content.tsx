@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps, Size } from '../../common';
 import { TileChild } from '../../layout/tile/tile-child';
 
 export interface ContentProps extends BaseProps<HTMLDivElement> {
-  options?: (Size)[];
+  options?: (Size | null | undefined)[];
 }
 
 export class Content extends BaseComponent<ContentProps> {

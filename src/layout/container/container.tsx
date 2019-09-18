@@ -4,7 +4,7 @@ import { ContainerFulid } from './container-fluid';
 import { TileChild } from '../tile/tile-child';
 
 interface ContainerProps extends BaseProps<HTMLDivElement> {
-  options?: (ContainerFulid | Responsiveness | string)[];
+  options?: (ContainerFulid | Responsiveness | string | null | undefined)[];
 }
 
 export class Container extends BaseComponent<ContainerProps> {

@@ -2,7 +2,7 @@ import React from 'react';
 import { classNameBuilder, BaseComponent, BaseProps, State} from '../../common';
 
 interface BreadcrumbItemProps extends BaseProps<HTMLLIElement> {
-  options?: (State)[];
+  options?: (State | null | undefined)[];
 }
 
 export class BreadcrumbItem extends BaseComponent<BreadcrumbItemProps> {

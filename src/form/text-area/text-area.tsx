@@ -5,7 +5,7 @@ import { State } from '../../common/state';
 import { TextAreaHasFixedSize } from './text-area-fixed-size';
 
 interface TextAreaProps extends BaseProps<HTMLTextAreaElement> {
-  options?: (Color | Size | State | string)[];
+  options?: (Color | Size | State | string | null | undefined)[];
   disabled?: boolean;
   readOnly?: boolean;
   fixedSize?: boolean;

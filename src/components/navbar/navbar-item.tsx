@@ -5,7 +5,7 @@ import { NavbarItemOption, NavbarItemType } from './navbar-option';
 
 interface NavbarItemProps extends BaseProps<HTMLDivElement | HTMLAnchorElement> {
   itemType: NavbarItemType;
-  options?: (State | Ability | NavbarItemOption)[];
+  options?: (State | Ability | NavbarItemOption | null | undefined)[];
 }
 
 export class NavbarItem extends BaseComponent<NavbarItemProps> {
