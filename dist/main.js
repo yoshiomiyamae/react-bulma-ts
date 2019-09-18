@@ -2208,7 +2208,6 @@ class NavbarItem extends common_1.BaseComponent {
         return react_1.default.createElement(this.props.itemType, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'navbar-item',
                 ...options,
-                (this.props.hasDropdown ? 'has-dropdown' : null),
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
             ]) }), this.props.children);
     }
@@ -2283,6 +2282,7 @@ exports.NavbarMenu = NavbarMenu;
 Object.defineProperty(exports, "__esModule", { value: true });
 var NavbarItemOption;
 (function (NavbarItemOption) {
+    NavbarItemOption["DropDown"] = "has-dropdown";
     NavbarItemOption["DropUp"] = "has-dropdown-up";
     NavbarItemOption["Expanded"] = "is-expanded";
     NavbarItemOption["Tab"] = "is-tab";

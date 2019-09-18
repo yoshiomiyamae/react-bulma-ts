@@ -1,4 +1,5 @@
 export enum NavbarItemOption {
+  DropDown = 'has-dropdown',
   DropUp = 'has-dropdown-up',
   Expanded = 'is-expanded',
   Tab = 'is-tab',

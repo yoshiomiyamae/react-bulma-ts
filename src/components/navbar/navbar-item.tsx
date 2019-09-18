@@ -6,7 +6,6 @@ import { NavbarItemOption, NavbarItemType } from './navbar-option';
 interface NavbarItemProps extends BaseProps<HTMLDivElement | HTMLAnchorElement> {
   itemType: NavbarItemType;
   options?: (State | Ability | NavbarItemOption)[];
-  hasDropdown?: boolean;
 }
 
 export class NavbarItem extends BaseComponent<NavbarItemProps> {
@@ -20,7 +19,6 @@ export class NavbarItem extends BaseComponent<NavbarItemProps> {
           [
             'navbar-item',
             ...options,
-            (this.props.hasDropdown ? 'has-dropdown' : null),
             (this.props.isTileChild ? TileChild.TileChild : null),
           ]
         ),
