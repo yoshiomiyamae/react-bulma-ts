@@ -1068,6 +1068,31 @@ exports.CardContent = CardContent;
 
 /***/ }),
 
+/***/ "./src/components/card/card-footer-item.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/card/card-footer-item.tsx ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+class CardFooterItem extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement(this.props.itemType, Object.assign({}, this.props, { className: 'card-footer-item' }), this.props.children);
+    }
+}
+exports.CardFooterItem = CardFooterItem;
+
+
+/***/ }),
+
 /***/ "./src/components/card/card-footer.tsx":
 /*!*********************************************!*\
   !*** ./src/components/card/card-footer.tsx ***!
@@ -1120,31 +1145,6 @@ class CardHeaderIcon extends common_1.BaseComponent {
     }
 }
 exports.CardHeaderIcon = CardHeaderIcon;
-
-
-/***/ }),
-
-/***/ "./src/components/card/card-header-item.tsx":
-/*!**************************************************!*\
-  !*** ./src/components/card/card-header-item.tsx ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
-const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
-class CardFooterItem extends common_1.BaseComponent {
-    render() {
-        return react_1.default.createElement(this.props.itemType, Object.assign({}, this.props, { className: 'card-footer-item' }), this.props.children);
-    }
-}
-exports.CardFooterItem = CardFooterItem;
 
 
 /***/ }),
@@ -1289,8 +1289,8 @@ __export(__webpack_require__(/*! ./card-header */ "./src/components/card/card-he
 __export(__webpack_require__(/*! ./card-header-icon */ "./src/components/card/card-header-icon.tsx"));
 __export(__webpack_require__(/*! ./card-header-title */ "./src/components/card/card-header-title.tsx"));
 __export(__webpack_require__(/*! ./card-image */ "./src/components/card/card-image.tsx"));
-__export(__webpack_require__(/*! ./card-header-item */ "./src/components/card/card-header-item.tsx"));
 __export(__webpack_require__(/*! ./card-option */ "./src/components/card/card-option.ts"));
+__export(__webpack_require__(/*! ./card-footer-item */ "./src/components/card/card-footer-item.tsx"));
 
 
 /***/ }),
@@ -1776,6 +1776,11 @@ __export(__webpack_require__(/*! ./modal */ "./src/components/modal/modal.tsx"))
 __export(__webpack_require__(/*! ./modal-background */ "./src/components/modal/modal-background.tsx"));
 __export(__webpack_require__(/*! ./modal-close */ "./src/components/modal/modal-close.tsx"));
 __export(__webpack_require__(/*! ./modal-content */ "./src/components/modal/modal-content.tsx"));
+__export(__webpack_require__(/*! ./modal-card */ "./src/components/modal/modal-card.tsx"));
+__export(__webpack_require__(/*! ./modal-card-body */ "./src/components/modal/modal-card-body.tsx"));
+__export(__webpack_require__(/*! ./modal-card-foot */ "./src/components/modal/modal-card-foot.tsx"));
+__export(__webpack_require__(/*! ./modal-card-head */ "./src/components/modal/modal-card-head.tsx"));
+__export(__webpack_require__(/*! ./modal-card-title */ "./src/components/modal/modal-card-title.tsx"));
 
 
 /***/ }),
@@ -1802,6 +1807,136 @@ class ModalBackground extends common_1.BaseComponent {
     }
 }
 exports.ModalBackground = ModalBackground;
+
+
+/***/ }),
+
+/***/ "./src/components/modal/modal-card-body.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/modal/modal-card-body.tsx ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class ModalCardBody extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("section", Object.assign({ className: common_1.classNameBuilder(["modal-card-head", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.ModalCardBody = ModalCardBody;
+
+
+/***/ }),
+
+/***/ "./src/components/modal/modal-card-foot.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/modal/modal-card-foot.tsx ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class ModalCardFoot extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("footer", Object.assign({ className: common_1.classNameBuilder(["modal-card-foot", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.ModalCardFoot = ModalCardFoot;
+
+
+/***/ }),
+
+/***/ "./src/components/modal/modal-card-head.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/modal/modal-card-head.tsx ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class ModalCardHead extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("header", Object.assign({ className: common_1.classNameBuilder(["modal-card-head", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.ModalCardHead = ModalCardHead;
+
+
+/***/ }),
+
+/***/ "./src/components/modal/modal-card-title.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/modal/modal-card-title.tsx ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class ModalCardTitle extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("p", Object.assign({ className: common_1.classNameBuilder(["modal-card-title", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.ModalCardTitle = ModalCardTitle;
+
+
+/***/ }),
+
+/***/ "./src/components/modal/modal-card.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/modal/modal-card.tsx ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class ModalCard extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(["modal-card", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.ModalCard = ModalCard;
 
 
 /***/ }),
@@ -3455,7 +3590,7 @@ class Subtitle extends common_1.BaseComponent {
     render() {
         return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.size}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'tag',
-                `is-${this.props.size}`,
+                `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
             ]) }), this.props.children);
