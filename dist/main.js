@@ -4397,6 +4397,152 @@ __export(__webpack_require__(/*! ./footer */ "./src/layout/footer/footer.tsx"));
 
 /***/ }),
 
+/***/ "./src/layout/hero/hero-body.tsx":
+/*!***************************************!*\
+  !*** ./src/layout/hero/hero-body.tsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class HeroBody extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(['hero-body', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.HeroBody = HeroBody;
+
+
+/***/ }),
+
+/***/ "./src/layout/hero/hero-footer.tsx":
+/*!*****************************************!*\
+  !*** ./src/layout/hero/hero-footer.tsx ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class HeroFooter extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(['hero-foot', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.HeroFooter = HeroFooter;
+
+
+/***/ }),
+
+/***/ "./src/layout/hero/hero-head.tsx":
+/*!***************************************!*\
+  !*** ./src/layout/hero/hero-head.tsx ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class HeroHead extends common_1.BaseComponent {
+    render() {
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(['hero-head', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.HeroHead = HeroHead;
+
+
+/***/ }),
+
+/***/ "./src/layout/hero/hero-with-navbar.ts":
+/*!*********************************************!*\
+  !*** ./src/layout/hero/hero-with-navbar.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var HeroFullHeightWithNavbar;
+(function (HeroFullHeightWithNavbar) {
+    HeroFullHeightWithNavbar["Default"] = "";
+    HeroFullHeightWithNavbar["FullHeightWithNavbar"] = "is-fullheight-with-navbar";
+})(HeroFullHeightWithNavbar = exports.HeroFullHeightWithNavbar || (exports.HeroFullHeightWithNavbar = {}));
+
+
+/***/ }),
+
+/***/ "./src/layout/hero/hero.tsx":
+/*!**********************************!*\
+  !*** ./src/layout/hero/hero.tsx ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
+const tile_child_1 = __webpack_require__(/*! ../tile/tile-child */ "./src/layout/tile/tile-child.ts");
+class Hero extends common_1.BaseComponent {
+    render() {
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("section", Object.assign({ className: common_1.classNameBuilder(['hero', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+    }
+}
+exports.Hero = Hero;
+
+
+/***/ }),
+
+/***/ "./src/layout/hero/index.ts":
+/*!**********************************!*\
+  !*** ./src/layout/hero/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./hero */ "./src/layout/hero/hero.tsx"));
+__export(__webpack_require__(/*! ./hero-with-navbar */ "./src/layout/hero/hero-with-navbar.ts"));
+__export(__webpack_require__(/*! ./hero-head */ "./src/layout/hero/hero-head.tsx"));
+__export(__webpack_require__(/*! ./hero-body */ "./src/layout/hero/hero-body.tsx"));
+__export(__webpack_require__(/*! ./hero-footer */ "./src/layout/hero/hero-footer.tsx"));
+
+
+/***/ }),
+
 /***/ "./src/layout/index.ts":
 /*!*****************************!*\
   !*** ./src/layout/index.ts ***!
@@ -4417,6 +4563,7 @@ __export(__webpack_require__(/*! ./section */ "./src/layout/section/index.ts"));
 __export(__webpack_require__(/*! ./footer */ "./src/layout/footer/index.ts"));
 __export(__webpack_require__(/*! ./section */ "./src/layout/section/index.ts"));
 __export(__webpack_require__(/*! ./tile */ "./src/layout/tile/index.ts"));
+__export(__webpack_require__(/*! ./hero */ "./src/layout/hero/index.ts"));
 
 
 /***/ }),

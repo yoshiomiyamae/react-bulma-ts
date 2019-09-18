@@ -5,3 +5,4 @@ export * from './section';
 export * from './footer';
 export * from './section';
 export * from './tile';
+export * from './hero';
