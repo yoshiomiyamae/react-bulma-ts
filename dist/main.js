@@ -2205,7 +2205,7 @@ const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./
 class NavbarItem extends common_1.BaseComponent {
     render() {
         const options = this.props.options ? this.props.options : [];
-        return react_1.default.createElement(this.props.buttonType, Object.assign({}, this.props, { className: common_1.classNameBuilder([
+        return react_1.default.createElement(this.props.itemType, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'navbar-item',
                 ...options,
                 (this.props.hasDropdown ? 'has-dropdown' : null),
@@ -2299,6 +2299,11 @@ var NavbarType;
     NavbarType["Html"] = "html";
     NavbarType["Body"] = "body";
 })(NavbarType = exports.NavbarType || (exports.NavbarType = {}));
+var NavbarItemType;
+(function (NavbarItemType) {
+    NavbarItemType["Div"] = "div";
+    NavbarItemType["Anchor"] = "a";
+})(NavbarItemType = exports.NavbarItemType || (exports.NavbarItemType = {}));
 var NavbarDropdownOption;
 (function (NavbarDropdownOption) {
     NavbarDropdownOption["Boxed"] = "is-boxed";

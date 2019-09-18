@@ -4,7 +4,7 @@ import { TileChild } from '../../layout/tile/tile-child';
 import { NavbarDropdownOption } from './navbar-option';
 
 interface NavbarDropDownProps extends BaseProps<HTMLDivElement> {
-  option?: (HorizontalAlignment | State | NavbarDropdownOption)[];
+  options?: (HorizontalAlignment | State | NavbarDropdownOption)[];
 }
 
 export class NavbarDropDown extends BaseComponent<NavbarDropDownProps> {

@@ -16,6 +16,12 @@ export enum NavbarType {
   Body = 'body',
 }
 
+export enum NavbarItemType {
+  Div = 'div',
+  Anchor = 'a',
+}
+
+
 export enum NavbarDropdownOption {
   Boxed = 'is-boxed',
 }
