@@ -2026,7 +2026,8 @@ const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts"
 const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class Modal extends common_1.BaseComponent {
     render() {
-        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(["modal", (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+        const options = this.props.options ? this.props.options : [];
+        return react_1.default.createElement("div", Object.assign({ className: common_1.classNameBuilder(["modal", ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
     }
 }
 exports.Modal = Modal;
