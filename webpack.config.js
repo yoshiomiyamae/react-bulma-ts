@@ -9,7 +9,9 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
+    library: 'react-bulma',
+    libraryTarget: 'umd',
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.css', '.sass']

@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("React"));
+	else if(typeof define === 'function' && define.amd)
+		define(["React"], factory);
+	else if(typeof exports === 'object')
+		exports["react-bulma"] = factory(require("React"));
+	else
+		root["react-bulma"] = factory(root["React"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_react__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -5037,9 +5047,10 @@ exports.Tile = Tile;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
 
 /***/ })
 
 /******/ });
+});
 //# sourceMappingURL=main.js.map
