@@ -17,7 +17,7 @@ export class Title extends BaseComponent<TitleProps> {
         ...this.props,
         className: classNameBuilder(
           [
-            'tag',
+            'title',
             `is-${this.props.level}`,
             (this.props.spaced ? 'is-spaced' : null),
             (this.props.isTileChild ? TileChild.TileChild : null),

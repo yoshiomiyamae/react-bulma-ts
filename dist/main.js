@@ -3656,7 +3656,7 @@ class Title extends common_1.BaseComponent {
     render() {
         ;
         return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.level}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
-                'tag',
+                'title',
                 `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
