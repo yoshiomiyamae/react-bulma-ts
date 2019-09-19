@@ -3655,7 +3655,7 @@ const title_type_1 = __webpack_require__(/*! ./title-type */ "./src/element/titl
 class Title extends common_1.BaseComponent {
     render() {
         ;
-        return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.size}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
+        return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.level}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'tag',
                 `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),
