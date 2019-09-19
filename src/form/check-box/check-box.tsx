@@ -9,8 +9,10 @@ interface CheckBoxProps extends BaseProps<HTMLInputElement> {
 
 export class CheckBox extends BaseComponent<CheckBoxProps> {
   render () {
+    const inputProps = { ...this.props};
+    delete inputProps.children;
     return <label className={classNameBuilder(['checkbox', (this.props.isTileChild ? TileChild.TileChild : null)])}>
-      <input type="checkbox" {...this.props}/>
+      <input type="checkbox" {...inputProps}/>
       {this.props.children}
     </label>
   }

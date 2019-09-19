@@ -8,9 +8,11 @@ interface RadioButtonProps extends BaseProps<HTMLInputElement> {
 }
 
 export class RadioButton extends BaseComponent<RadioButtonProps> {
-  render () {
+  render() {
+    const inputProps = { ...this.props };
+    delete inputProps.children;
     return <label className={classNameBuilder(['radio', (this.props.isTileChild ? TileChild.TileChild : null)])}>
-      <input type="radio" {...this.props}/>
+      <input type="radio" {...inputProps}/>
       {this.props.children}
     </label>
   }

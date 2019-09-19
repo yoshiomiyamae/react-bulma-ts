@@ -3688,8 +3688,10 @@ const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts"
 const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class CheckBox extends common_1.BaseComponent {
     render() {
+        const inputProps = Object.assign({}, this.props);
+        delete inputProps.children;
         return react_1.default.createElement("label", { className: common_1.classNameBuilder(['checkbox', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) },
-            react_1.default.createElement("input", Object.assign({ type: "checkbox" }, this.props)),
+            react_1.default.createElement("input", Object.assign({ type: "checkbox" }, inputProps)),
             this.props.children);
     }
 }
@@ -3923,12 +3925,14 @@ const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts"
 const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class File extends common_1.BaseComponent {
     render() {
+        const inputProps = Object.assign({}, this.props);
+        delete inputProps.children;
         const options = this.props.options ? this.props.options : [];
         return react_1.default.createElement("input", Object.assign({ className: common_1.classNameBuilder([
                 'file-input',
                 ...options,
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
-            ]), type: "file" }, this.props));
+            ]), type: "file" }, inputProps));
     }
 }
 exports.File = File;
@@ -4060,12 +4064,14 @@ const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts"
 const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class Input extends common_1.BaseComponent {
     render() {
+        const inputProps = Object.assign({}, this.props);
+        delete inputProps.children;
         const options = this.props.options ? this.props.options : [];
         return react_1.default.createElement("input", Object.assign({ className: common_1.classNameBuilder([
                 'input',
                 ...options,
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),
-            ]) }, this.props));
+            ]) }, inputProps));
     }
 }
 exports.Input = Input;
@@ -4154,8 +4160,10 @@ const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts"
 const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./src/layout/tile/tile-child.ts");
 class RadioButton extends common_1.BaseComponent {
     render() {
+        const inputProps = Object.assign({}, this.props);
+        delete inputProps.children;
         return react_1.default.createElement("label", { className: common_1.classNameBuilder(['radio', (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) },
-            react_1.default.createElement("input", Object.assign({ type: "radio" }, this.props)),
+            react_1.default.createElement("input", Object.assign({ type: "radio" }, inputProps)),
             this.props.children);
     }
 }

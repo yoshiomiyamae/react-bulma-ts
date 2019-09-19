@@ -9,7 +9,9 @@ interface InputProps extends BaseProps<HTMLInputElement> {
 }
 
 export class Input extends BaseComponent<InputProps> {
-  render () {
+  render() {
+    const inputProps = { ...this.props };
+    delete inputProps.children;
     const options = this.props.options ? this.props.options : [];
     return <input
       className={classNameBuilder([
@@ -17,7 +19,7 @@ export class Input extends BaseComponent<InputProps> {
         ...options,
         (this.props.isTileChild ? TileChild.TileChild : null),
       ])}
-      {...this.props}
+      {...inputProps}
       />
   }
 }

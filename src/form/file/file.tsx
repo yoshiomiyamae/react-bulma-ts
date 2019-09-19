@@ -10,7 +10,9 @@ interface FileProps extends BaseProps<HTMLInputElement> {
 }
 
 export class File extends BaseComponent<FileProps> {
-  render () {
+  render() {
+    const inputProps = { ...this.props };
+    delete inputProps.children;
     const options = this.props.options ? this.props.options : [];
     return <input
       className={classNameBuilder([
@@ -19,7 +21,7 @@ export class File extends BaseComponent<FileProps> {
         (this.props.isTileChild ? TileChild.TileChild : null),
       ])}
       type="file"
-      {...this.props}
+      {...inputProps}
       />
   }
 }
