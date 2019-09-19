@@ -9,4 +9,4 @@ export * from './text-option';
 export * from './ability';
 export * from './style';
 
-export const classNameBuilder = (classNames: (string | null | undefined)[]) => (classNames.filter((className) => className) as string[]).reduce((previousValue, currentValue) => `${previousValue} ${currentValue}`);
+export const classNameBuilder = (classNames: (string | null | undefined)[]) => (classNames.filter((className) => className) as string[]).reduce((previousValue, currentValue) => `${previousValue} ${currentValue}`, '');

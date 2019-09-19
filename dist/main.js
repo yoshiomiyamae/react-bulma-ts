@@ -804,7 +804,7 @@ __export(__webpack_require__(/*! ./alignment */ "./src/common/alignment.ts"));
 __export(__webpack_require__(/*! ./text-option */ "./src/common/text-option.ts"));
 __export(__webpack_require__(/*! ./ability */ "./src/common/ability.ts"));
 __export(__webpack_require__(/*! ./style */ "./src/common/style.ts"));
-exports.classNameBuilder = (classNames) => classNames.filter((className) => className).reduce((previousValue, currentValue) => `${previousValue} ${currentValue}`);
+exports.classNameBuilder = (classNames) => classNames.filter((className) => className).reduce((previousValue, currentValue) => `${previousValue} ${currentValue}`, '');
 
 
 /***/ }),
