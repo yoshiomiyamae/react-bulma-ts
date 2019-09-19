@@ -1709,7 +1709,7 @@ const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
 const common_1 = __webpack_require__(/*! ../../common */ "./src/common/index.ts");
 class MessageBody extends common_1.BaseComponent {
     render() {
-        return react_1.default.createElement("div", Object.assign({ className: "message-header" }, this.props), this.props.children);
+        return react_1.default.createElement("div", Object.assign({ className: "message-body" }, this.props), this.props.children);
     }
 }
 exports.MessageBody = MessageBody;
@@ -3003,7 +3003,7 @@ const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./
 class Icon extends common_1.BaseComponent {
     render() {
         const options = this.props.options ? this.props.options : [];
-        return react_1.default.createElement("span", Object.assign({ className: common_1.classNameBuilder(['buttons', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+        return react_1.default.createElement("span", Object.assign({ className: common_1.classNameBuilder(['icon', ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
     }
 }
 exports.Icon = Icon;
@@ -3604,7 +3604,7 @@ const title_type_1 = __webpack_require__(/*! ./title-type */ "./src/element/titl
 class Subtitle extends common_1.BaseComponent {
     render() {
         return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.size}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
-                'tag',
+                'subtitle',
                 `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),
                 (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null),

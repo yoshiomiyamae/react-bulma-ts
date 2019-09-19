@@ -17,7 +17,7 @@ export class Subtitle extends BaseComponent<SubtitleProps> {
         ...this.props,
         className: classNameBuilder(
           [
-            'tag',
+            'subtitle',
             `is-${this.props.level}`,
             (this.props.spaced ? 'is-spaced' : null),
             (this.props.isTileChild ? TileChild.TileChild : null),

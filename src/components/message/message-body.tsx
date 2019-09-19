@@ -6,7 +6,7 @@ interface MessageBodyProps extends BaseProps<HTMLDivElement> {
 
 export class MessageBody extends BaseComponent<MessageBodyProps> {
   render() {
-    return <div className="message-header" {...this.props}>
+    return <div className="message-body" {...this.props}>
       {this.props.children}
     </div>
   }

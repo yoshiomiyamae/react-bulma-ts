@@ -9,7 +9,7 @@ interface IconProps extends BaseProps<HTMLSpanElement> {
 export class Icon extends BaseComponent<IconProps> {
   render () {
     const options = this.props.options ? this.props.options : [];
-    return <span className={classNameBuilder(['buttons', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
+    return <span className={classNameBuilder(['icon', ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
       {this.props.children}
     </span>
   }

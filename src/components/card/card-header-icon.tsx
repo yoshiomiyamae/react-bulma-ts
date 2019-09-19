@@ -5,7 +5,7 @@ import { ButtonType } from '../../element/button/button-type';
 
 export interface CardHeaderIconProps extends BaseProps<HTMLAnchorElement | HTMLButtonElement | HTMLInputElement | HTMLSpanElement> {
   iconType: ButtonType;
-  options?: (Color | Size | State | string)[];
+  options?: (Color | Size | State | string | null | undefined)[];
 }
 
 export class CardHeaderIcon extends BaseComponent<CardHeaderIconProps> {
