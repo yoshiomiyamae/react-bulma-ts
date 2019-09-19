@@ -9,8 +9,10 @@ interface TabProps extends BaseProps<HTMLLIElement> {
 export class Tab extends BaseComponent<TabProps> {
   render() {
     const options = this.props.options ? this.props.options : [];
-    return <li className={classNameBuilder(["tab", ...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
-      {this.props.children}
+    return <li className={classNameBuilder([...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
+      <a>
+        {this.props.children}
+      </a>
     </li>
   }
 }

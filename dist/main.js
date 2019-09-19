@@ -2692,7 +2692,8 @@ const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./
 class Tab extends common_1.BaseComponent {
     render() {
         const options = this.props.options ? this.props.options : [];
-        return react_1.default.createElement("li", Object.assign({ className: common_1.classNameBuilder(["tab", ...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props), this.props.children);
+        return react_1.default.createElement("li", Object.assign({ className: common_1.classNameBuilder([...options, (this.props.isTileChild ? tile_child_1.TileChild.TileChild : null)]) }, this.props),
+            react_1.default.createElement("a", null, this.props.children));
     }
 }
 exports.Tab = Tab;
