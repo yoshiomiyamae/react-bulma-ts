@@ -3604,7 +3604,7 @@ const tile_child_1 = __webpack_require__(/*! ../../layout/tile/tile-child */ "./
 const title_type_1 = __webpack_require__(/*! ./title-type */ "./src/element/title/title-type.ts");
 class Subtitle extends common_1.BaseComponent {
     render() {
-        return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.size}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
+        return react_1.default.createElement(this.props.titleType === title_type_1.TitleType.Paragraph ? title_type_1.TitleType.Paragraph : `${title_type_1.TitleType.Heading}${this.props.level}`, Object.assign({}, this.props, { className: common_1.classNameBuilder([
                 'subtitle',
                 `is-${this.props.level}`,
                 (this.props.spaced ? 'is-spaced' : null),

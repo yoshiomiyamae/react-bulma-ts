@@ -12,7 +12,7 @@ interface SubtitleProps extends BaseProps<HTMLHeadingElement | HTMLParagraphElem
 export class Subtitle extends BaseComponent<SubtitleProps> {
   render () {
     return React.createElement(
-      this.props.titleType === TitleType.Paragraph ? TitleType.Paragraph : `${TitleType.Heading}${this.props.size}`,
+      this.props.titleType === TitleType.Paragraph ? TitleType.Paragraph : `${TitleType.Heading}${this.props.level}`,
       {
         ...this.props,
         className: classNameBuilder(
