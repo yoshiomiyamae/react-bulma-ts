@@ -16,10 +16,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.css', '.sass']
   },
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM',
-  },
+  // externals: {
+  //   'react': 'React',
+  //   'react-dom': 'ReactDOM',
+  // },
   module: {
     rules: [
       {

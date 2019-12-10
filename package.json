@@ -1,28 +1,28 @@
 {
   "name": "react-bulma",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/main.js",
   "types": "src/index.ts",
   "repository": "https://github.com/yoshiomiyamae/react-bulma.git",
   "author": "Yoshio Miyamae <yoshio.miyamae@famoce-succellion.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/react": "^16.9.1",
-    "css-loader": "^3.2.0",
+    "@types/react": "^16.9.16",
+    "css-loader": "^3.3.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
-    "sass-loader": "^7.2.0",
-    "style-loader": "^1.0.0",
-    "terser-webpack-plugin": "^1.4.1",
-    "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "terser-webpack-plugin": "^2.2.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "bulma": "^0.7.5",
-    "react": "^16.9.0"
+    "bulma": "^0.8.0",
+    "react": "^16.12.0"
   }
 }
