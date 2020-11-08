@@ -2,7 +2,7 @@ import React from 'react';
 import { BaseComponent, BaseProps, classNameBuilder, State } from '../../common';
 
 interface PaginationLinkProps extends BaseProps<HTMLAnchorElement> {
-  options?: (State | null | undefined)[];
+  options?: (State | string | null | undefined)[];
 }
 
 export class PaginationLink extends BaseComponent<PaginationLinkProps> {

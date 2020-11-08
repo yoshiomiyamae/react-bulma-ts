@@ -3,7 +3,7 @@ import { BaseComponent, BaseProps, classNameBuilder, Color, Size } from '../../c
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface MessageProps extends BaseProps<HTMLElement> {
-  options?: (Color | Size | null | undefined)[];
+  options?: (Color | Size | string | null | undefined)[];
 }
 
 export class Message extends BaseComponent<MessageProps> {

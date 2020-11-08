@@ -3,7 +3,7 @@ import { BaseComponent, BaseProps, Size, HorizontalAlignment, Style, classNameBu
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface TabsProps extends BaseProps<HTMLDivElement> {
-  options?: (Size | HorizontalAlignment | Style | null | undefined)[];
+  options?: (Size | HorizontalAlignment | Style | string | null | undefined)[];
 }
 
 export class Tabs extends BaseComponent<TabsProps> {

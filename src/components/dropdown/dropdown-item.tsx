@@ -4,7 +4,7 @@ import { DropDownItemType } from './dropdown-item-type';
 
 interface DropdownItemProps extends BaseProps<HTMLDivElement | HTMLAnchorElement> {
   itemType: DropDownItemType;
-  options?: (State | null | undefined)[];
+  options?: (State | string | null | undefined)[];
 }
 
 export class DropdownItemm extends BaseComponent<DropdownItemProps> {

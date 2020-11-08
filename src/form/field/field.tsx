@@ -4,7 +4,7 @@ import { FieldOption } from './field-option';
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface FieldProps extends BaseProps<HTMLDivElement> {
-  options?: (FieldOption | null | undefined)[];
+  options?: (FieldOption | string | null | undefined)[];
 }
 
 export class Field extends BaseComponent<FieldProps> {

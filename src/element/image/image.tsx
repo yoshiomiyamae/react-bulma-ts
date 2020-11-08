@@ -5,7 +5,7 @@ import { ImageSize, ImageOption } from './image-size';
 
 interface ImageProps extends BaseProps<HTMLElement> {
   src: string;
-  options?: (ImageSize | Size | ImageOption | null | undefined)[];
+  options?: (ImageSize | Size | ImageOption | string | null | undefined)[];
   rounded?: boolean;
 }
 

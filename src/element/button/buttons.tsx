@@ -4,7 +4,7 @@ import { TileChild } from '../../layout/tile/tile-child';
 import { ButtonAddon } from './button-addon';
 
 interface ButtonsProps extends BaseProps<HTMLDivElement> {
-  options?: (Sizes | HorizontalAlignment | null | undefined)[];
+  options?: (Sizes | HorizontalAlignment | string | null | undefined)[];
   hasAddons?: boolean;
 }
 

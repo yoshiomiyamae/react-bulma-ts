@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps, Color, Size } from '../../c
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface ProgressBarProps extends BaseProps<HTMLProgressElement> {
-  options?: (Color | Size | null | undefined)[];
+  options?: (Color | Size | string | null | undefined)[];
   value?: number;
   max: number;
 }

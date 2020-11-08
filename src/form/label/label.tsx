@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps, Size} from '../../common';
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface LabelProps extends BaseProps<HTMLLabelElement> {
-  options?: (Size | null | undefined)[];
+  options?: (Size | string | null | undefined)[];
   disabled?: boolean;
   readOnly?: boolean;
 }

@@ -3,7 +3,7 @@ import { BaseComponent, BaseProps, classNameBuilder, State } from '../../common'
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface NavbarMenuProps extends BaseProps<HTMLDivElement> {
-  options?: (State | null | undefined)[];
+  options?: (State | string | null | undefined)[];
 }
 
 export class NavbarMenu extends BaseComponent<NavbarMenuProps> {

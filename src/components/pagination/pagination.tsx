@@ -3,7 +3,7 @@ import { BaseComponent, BaseProps, classNameBuilder, Size, HorizontalAlignment }
 import { TileChild } from '../../layout/tile/tile-child';
 
 interface PaginationProps extends BaseProps<HTMLElement> {
-  options?: (Size | HorizontalAlignment | null | undefined)[];
+  options?: (Size | HorizontalAlignment | string | null | undefined)[];
   rounded?: boolean;
 }
 

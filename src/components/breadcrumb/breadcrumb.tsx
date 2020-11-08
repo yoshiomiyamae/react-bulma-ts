@@ -4,7 +4,7 @@ import { TileChild } from '../../layout/tile/tile-child';
 import { BreadcrumbSeparator } from './breadcrumb-separator';
 
 interface BreadcrumbProps extends BaseProps<HTMLElement> {
-  options?: (HorizontalAlignment | Size | null | undefined)[];
+  options?: (HorizontalAlignment | Size | string | null | undefined)[];
   separator?: BreadcrumbSeparator;
 }
 

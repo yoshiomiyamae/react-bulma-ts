@@ -4,7 +4,7 @@ import { TileChild } from '../../layout/tile/tile-child';
 import { NavbarOption, NavbarType } from './navbar-option';
 
 interface NavbarProps extends BaseProps<HTMLElement | HTMLBodyElement> {
-  options?: (NavbarOption | Color | null | undefined)[];
+  options?: (NavbarOption | Color | string | null | undefined)[];
   navbarType: NavbarType;
 }
 
