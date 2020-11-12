@@ -1,0 +1,53 @@
+= React Bulma TS
+:lang: en
+:doctype: book
+:toc: left
+:toclevels: 2
+:toc-title: Table of Contents
+:sectnums:
+:sectnumlevels: 4
+:sectlinks:
+:imagesdir: ./_images
+:icons: font
+:source-highlighter: rouge
+:chapter-label:
+:example-caption: e.g.
+:table-caption: Table
+:figure-caption: Figure
+:author: Yoshio Miyamae
+:email: yoshio.miyamae@famoce-succellion.com
+:revnumber: 1.0
+:revdate: 2020/11/12
+:experimental:
+:data-uri:
+
+React Bulma TS is wrapper of https://bulma.io/[Bulma] v0.9.1 for https://ja.reactjs.org/[React] + https://www.typescriptlang.org/[TypeScript]
+
+== Installation ==
+
+`yarn add react-bulma-ts`
+
+== Usage ==
+
+[source,tsx]
+----
+import React from "react";
+import * as Bulma from "react-bulma-ts";
+import "react-bulma-ts/dist/main.css";
+
+interface ContenerProps {
+
+}
+
+export default class Container extends React.Component<ContainerProps> {
+    render() {
+        return (
+            <Bulma.Container>
+                <Bulma.Notification options={[Bulma.Color.Primary]}>
+        This container is <strong>fullwidth</strong> <em>until</em> the <code>$widescreen</code> breakpoint.
+      </Bulma.Notification>
+            </Bulma.Container>
+        );
+    }
+}
+----
