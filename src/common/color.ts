@@ -4,6 +4,7 @@ export enum Color {
   Primary = 'is-primary',
   Info = 'is-info',
   Success = 'is-success',
+  Link = 'is-link',
   Warning = 'is-warning',
   Danger = 'is-danger',
   Light = 'is-light',
