@@ -7,7 +7,7 @@ interface DropdownItemProps extends BaseProps<HTMLDivElement | HTMLAnchorElement
   options?: (State | string | null | undefined)[];
 }
 
-export class DropdownItemm extends BaseComponent<DropdownItemProps> {
+export class DropdownItem extends BaseComponent<DropdownItemProps> {
   render() {
     const options = this.props.options ? this.props.options : [];
     return React.createElement(
