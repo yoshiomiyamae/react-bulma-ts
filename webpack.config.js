@@ -4,13 +4,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.ts',
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    library: 'react-bulma',
+    library: 'react-bulma-ts',
     libraryTarget: 'umd',
   },
   resolve: {
