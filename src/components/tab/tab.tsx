@@ -10,7 +10,7 @@ export class Tab extends BaseComponent<TabProps> {
   render() {
     const options = this.props.options ? this.props.options : [];
     return <li className={classNameBuilder([...options, (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
-      <a>
+      <a {...(this.props.href && {href: this.props.href})}>
         {this.props.children}
       </a>
     </li>
