@@ -2,10 +2,10 @@ import React from 'react';
 import { classNameBuilder, BaseComponent, BaseProps, Color, Size} from '../../common';
 import { TileChild } from '../../layout/tile/tile-child';
 import { TagOption } from './tag-option';
-import { ButtonType } from '../button';
+import { TagType } from './tag-type';
 
 interface TagProps extends BaseProps<HTMLAnchorElement | HTMLButtonElement | HTMLInputElement | HTMLSpanElement> {
-  buttonType: ButtonType;
+  tagType: TagType;
   options?: (Color | Size | TagOption | string | null | undefined)[];
 }
 
