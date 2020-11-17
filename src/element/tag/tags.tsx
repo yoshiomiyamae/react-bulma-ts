@@ -8,7 +8,7 @@ interface TagsProps extends BaseProps<HTMLDivElement> {
 
 export class Tags extends BaseComponent<TagsProps> {
   render () {
-    return <div className={classNameBuilder(['tags', (this.props.isTileChild ? TileChild.TileChild : null), (this.props.hasAddon ? 'has-addon' : null)])} {...this.props}>
+    return <div className={classNameBuilder(['tags', (this.props.isTileChild ? TileChild.TileChild : null), (this.props.hasAddon ? 'has-addons' : null)])} {...this.props}>
         {this.props.children}
     </div>
   }
