@@ -1,14 +1,16 @@
 import React from 'react';
 import { classNameBuilder, BaseComponent, BaseProps} from '../../common';
-import { TileChild } from '../../layout/tile/tile-child';
+import { TableModifiers } from './table-modifiers';
 
 interface TableProps extends BaseProps<HTMLTableElement> {
+  options: (TableModifiers | string | null | undefined)[];
 }
 
 export class Table extends BaseComponent<TableProps> {
   render () {
-    return <table className={classNameBuilder(['table', (this.props.isTileChild ? TileChild.TileChild : null)])} {...this.props}>
-        {this.props.children}
+    const options = this.props.options ? this.props.options : [];
+    return <table className={classNameBuilder(["table", ...options])} {...this.props}>
+      {this.props.children}
     </table>
   }
 }
