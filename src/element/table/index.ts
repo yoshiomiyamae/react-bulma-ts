@@ -6,3 +6,4 @@ export * from './table-footer';
 export * from './table-header';
 export * from './table-header-cell';
 export * from './table-row';
+export * from './table-modifiers';
