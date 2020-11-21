@@ -1,5 +1,5 @@
-import { ColumnGap, ColumnOffset, ColumnSize, ColumnThickness } from "../column";
-import { HorizontalAlignment, TextAlignment, VerticalAlignment } from "./alignment";
+import { ColumnGap, ColumnOffset, ColumnSize, ColumnThickness } from "./column";
+import { HorizontalAlignment, TextAlignment, VerticalAlignment } from "./common/alignment";
 
 export enum Responsiveness {
   Default =  '',

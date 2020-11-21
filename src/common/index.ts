@@ -1,4 +1,4 @@
-export * from './responsiveness';
+export * from '../responsiveness';
 export * from './color';
 export * from './gradient';
 export * from './size';
