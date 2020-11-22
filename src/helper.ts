@@ -15,6 +15,7 @@ export namespace Helpers {
     Clipped = 'is-clipped',
     RadiusLess = 'is-radiusless',
     ShadowLess = 'is-shadowless',
+    UnSelectable = 'is-unselectable',
     Invisible = 'is-invisible',
   }
 }
