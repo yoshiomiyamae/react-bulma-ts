@@ -3,7 +3,7 @@ import { classNameBuilder, BaseComponent, BaseProps} from '../../common';
 import { TableModifiers } from './table-modifiers';
 
 interface TableProps extends BaseProps<HTMLTableElement> {
-  options: (TableModifiers | string | null | undefined)[];
+  options?: (TableModifiers | string | null | undefined)[];
 }
 
 export class Table extends BaseComponent<TableProps> {
