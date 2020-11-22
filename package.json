@@ -1,6 +1,6 @@
 {
   "name": "react-bulma-ts",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "main": "dist/main.js",
   "types": "src/index.ts",
   "repository": "https://github.com/yoshiomiyamae/react-bulma-ts.git",
